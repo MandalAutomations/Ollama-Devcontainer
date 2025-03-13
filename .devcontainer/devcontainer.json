@@ -1,8 +1,9 @@
 {
-    "name": "C# (.NET)",
+    "name": "Dev Container Compose",
     "dockerComposeFile": "docker-compose.yml",
     "service": "app",
-    "workspaceFolder": "/workspaces/MemberCore"
+    "workspaceFolder": "/workspaces/Dev-Container-Compose",
+    "forwardPorts": [8080]
 
     // Set *default* container specific settings.json values on container create.
     // "settings": {
