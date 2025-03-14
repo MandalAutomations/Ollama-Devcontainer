@@ -63,9 +63,15 @@ Add any required packages to `requirements.txt` and they will be automatically i
 
 Change the model in `main.py` by modifying the `MODEL` constant. The template will automatically pull the model if it's not already available.
 
-### Web Server
+## Running the Example
 
-The included Nginx server is accessible at http://localhost:8080. Place your HTML, CSS, and JavaScript files in the `.devcontainer/html` directory.
+To run the example script:
+
+```bash
+python main.py
+```
+
+This will initialize the specified Ollama model and generate a response to the prompt defined in `main.py`.
 
 ## License
 

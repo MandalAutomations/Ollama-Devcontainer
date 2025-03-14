@@ -5,13 +5,7 @@ services:
         working_dir: /workspaces/Dev-Container-Compose
         volumes:
         - ..:/workspaces/Dev-Container-Compose
-    web:
-        image: nginx:latest  
-        ports:
-        - "8080:80"
-        volumes:
-        - ./html:/usr/share/nginx/html
-
+        
     ollama:
         image: ollama/ollama:latest
         container_name: ollama
