@@ -20,8 +20,6 @@ services:
             - "11434:11434"
         volumes:
             - ollama_data:/root/.ollama
-        environment:
-            - MODEL_NAME=llama2
             
 volumes:
   ollama_data:
