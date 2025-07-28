@@ -5,23 +5,4 @@
     "workspaceFolder": "/workspaces/Dev-Container-Compose",
     "postStartCommand": "pip install -r requirements.txt",
     "forwardPorts": [8080]
-
-    // Set *default* container specific settings.json values on container create.
-    // "settings": {
-    //     "terminal.integrated.shell.linux": "/bin/bash"
-    // },
-
-    // // Add the IDs of extensions you want installed when the container is created.
-    // "extensions": [
-    //     "ms-dotnettools.csharp",
-    //     "wakatime.vscode-wakatime",
-    //     "fernandoescolar.vscode-solution-explorer",
-    //     "adrianwilczynski.add-reference",
-    //     "kreativ-software.csharpextensions",
-    //     "k--kato.docomment",
-    //     "pranaygp.vscode-css-peek",
-    //     "dbaeumer.vscode-eslint",
-    //     "patcx.vscode-nuget-gallery",
-    //     "derivitec-ltd.vscode-dotnet-adapter"
-    // ],
 }
