@@ -1,5 +1,10 @@
 name: Ollama GitHub Workflow Example
-on: workflow_dispatch
+on: 
+  workflow_dispatch:
+    inputs: 
+      prompt:
+        description: 'Prompt for the Ollama model'
+        required: true
 
 jobs:
   container-job:
@@ -30,4 +35,4 @@ jobs:
       - name: Run tests
         run: |
           echo "Running tests..."
-          python test.py
+          python test.py "${{ inputs.prompt }}"" >> $GITHUB_STEP_SUMMARY
