@@ -35,4 +35,4 @@ jobs:
       - name: Run tests
         run: |
           echo "Running tests..."
-          python test.py "${{ inputs.prompt }}"" >> $GITHUB_STEP_SUMMARY
+          python test.py "${{ inputs.prompt }}" >> $GITHUB_STEP_SUMMARY
