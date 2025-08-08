@@ -1,4 +1,4 @@
-name: Ollama container example
+name: Ollama GitHub Workflow Example
 on: workflow_dispatch
 
 jobs:
@@ -26,15 +26,6 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt
-
-      - name: Wait for Ollama
-        run: |
-          echo "Waiting for Ollama to be ready..."
-          for i in {1..10}; do
-            curl -f http://localhost:11434 && break
-            echo "Ollama not ready yet... retrying"
-            sleep 5
-          done
 
       - name: Run tests
         run: |
