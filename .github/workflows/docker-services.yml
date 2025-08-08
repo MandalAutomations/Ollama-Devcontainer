@@ -4,13 +4,12 @@ on: workflow_dispatch
 jobs:
   container-job:
     runs-on: ubuntu-latest
-    container: node:16-bullseye
 
     services:
       ollama:
         image: ollama/ollama:latest
         ports:
-          - "11434:11434"
+          - 11434:11434
         volumes:
           - ollama_data:/root/.ollama
 
@@ -18,7 +17,11 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Test Ollama service
+      - name: Wait for Ollama
         run: |
-          echo "Testing Ollama service..."
-          curl -s http://localhost:11434
+          echo "Waiting for Ollama to be ready..."
+          for i in {1..10}; do
+            curl -f http://localhost:11434 && break
+            echo "Ollama not ready yet... retrying"
+            sleep 5
+          done
