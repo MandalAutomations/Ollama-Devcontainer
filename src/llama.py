@@ -60,5 +60,4 @@ class llama:
                 except json.JSONDecodeError:
                     print(f"Error decoding JSON: {decoded_line}")
 
-        print(response_text)
         return response_text

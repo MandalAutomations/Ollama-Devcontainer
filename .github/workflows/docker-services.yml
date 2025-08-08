@@ -1,0 +1,92 @@
+name: Docker Services CI
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  test-services:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+    
+    - name: Create docker-compose.yml
+      run: |
+        cat > docker-compose.yml << 'EOF'
+        version: '3.8'
+        services:
+          app:
+            image: python:3.10.16-bullseye
+            command: sleep infinity
+            working_dir: /workspaces/Dev-Container-Compose
+            volumes:
+              - .:/workspaces/Dev-Container-Compose
+            depends_on:
+              - ollama
+            
+          ollama:
+            image: ollama/ollama:latest
+            container_name: ollama
+            restart: unless-stopped
+            ports:
+              - "11434:11434"
+            volumes:
+              - ollama_data:/root/.ollama
+              
+        volumes:
+          ollama_data:
+            driver: local
+        EOF
+    
+    - name: Start services
+      run: |
+        docker-compose up -d
+        
+    - name: Wait for Ollama to be ready
+      run: |
+        echo "Waiting for Ollama service to be ready..."
+        timeout 300 bash -c 'until curl -f http://localhost:11434/api/version; do sleep 5; done'
+        
+    - name: Install dependencies in app container
+      run: |
+        docker-compose exec -T app pip install -r requirements.txt
+        
+    - name: Test Ollama connection
+      run: |
+        # Test that Ollama API is accessible
+        curl -X POST http://localhost:11434/api/generate \
+          -H "Content-Type: application/json" \
+          -d '{"model": "llama3.2:1b", "prompt": "Hello", "stream": false}' || true
+        
+    - name: Run application tests (if any)
+      run: |
+        # Add your test commands here
+        docker-compose exec -T app python -c "
+        import sys
+        sys.path.append('/workspaces/Dev-Container-Compose')
+        try:
+            from src.llama import llama
+            print('Successfully imported llama module')
+        except ImportError as e:
+            print(f'Import error: {e}')
+            sys.exit(1)
+        "
+        
+    - name: Show service logs
+      if: failure()
+      run: |
+        echo "=== App Service Logs ==="
+        docker-compose logs app
+        echo "=== Ollama Service Logs ==="
+        docker-compose logs ollama
+        
+    - name: Cleanup
+      if: always()
+      run: |
+        docker-compose down -v
+        docker system prune -f
