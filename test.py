@@ -1,7 +1,8 @@
 import os
 from src.llama import llama
 
-OLLAMA_HOST = os.getenv("OLLAMA_HOST", "http://ollama:11434")
+# Use localhost for CI/local testing, ollama for Docker containers
+OLLAMA_HOST = os.getenv("OLLAMA_HOST", "http://localhost:11434")
 MODEL = "llama3.2:1b" # Find available models here https://ollama.com/library
 
 if __name__ == "__main__":
@@ -11,3 +12,9 @@ if __name__ == "__main__":
     prompt = "What is the capital of France?"
     response = llama.generate_response(prompt)
     print(response if response else "No response generated.")
+  
+  
+user = "David"
+
+if user == "David":
+    be_nice = False
