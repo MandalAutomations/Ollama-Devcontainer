@@ -21,4 +21,4 @@ jobs:
       - name: Test Ollama service
         run: |
           echo "Testing Ollama service..."
-          curl -s http://localhost:11434/health || exit 1
+          curl -s http://localhost:11434 || exit 1
