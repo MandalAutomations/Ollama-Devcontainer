@@ -38,4 +38,4 @@ jobs:
           OLLAMA_HOST: "http://localhost:11434"
         run: |
           echo "Running tests..."
-          python test.py "${{ inputs.prompt }}" >> $GITHUB_STEP_SUMMARY
+          python main.py "${{ inputs.prompt }}" >> $GITHUB_STEP_SUMMARY
