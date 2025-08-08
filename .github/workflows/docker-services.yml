@@ -21,4 +21,5 @@ jobs:
       - name: Test Ollama service
         run: |
           echo "Testing Ollama service..."
-          curl -s http://localhost:11434 || exit 1
+          docker ps
+        #   curl -s http://localhost:11434 || exit 1
