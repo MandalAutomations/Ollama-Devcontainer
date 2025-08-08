@@ -12,9 +12,7 @@ if __name__ == "__main__":
     prompt = "What is the capital of France?"
     response = llama.generate_response(prompt)
     print(response if response else "No response generated.")
-  
-  
-user = "David"
 
-if user == "David":
-    be_nice = False
+    if os.getenv("GITHUB_STEP_SUMMARY") != None:
+        with open(os.environ["GITHUB_STEP_SUMMARY"], "a") as f:
+            f.write(response)
