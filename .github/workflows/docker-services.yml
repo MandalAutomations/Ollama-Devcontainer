@@ -4,6 +4,7 @@ on:
     inputs: 
       prompt:
         description: 'Prompt for the Ollama model'
+        default: 'What is the capital of France?'
         required: true
 
 jobs:
@@ -33,6 +34,8 @@ jobs:
           pip install -r requirements.txt
 
       - name: Run tests
+        env:
+          OLLAMA_HOST: "http://localhost:11434"
         run: |
           echo "Running tests..."
           python test.py "${{ inputs.prompt }}" >> $GITHUB_STEP_SUMMARY
