@@ -15,7 +15,5 @@ if __name__ == "__main__":
 
     summary_path = os.getenv("GITHUB_STEP_SUMMARY")
     if summary_path and response:
-        print('18')
         with open(summary_path, "a") as f:
-            print('19')
             f.write(response)
