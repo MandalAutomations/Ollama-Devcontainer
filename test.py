@@ -13,6 +13,7 @@ if __name__ == "__main__":
     response = llama.generate_response(prompt)
     print(response if response else "No response generated.")
 
-    if os.getenv("GITHUB_STEP_SUMMARY") != None:
-        with open(os.environ["GITHUB_STEP_SUMMARY"], "a") as f:
+    summary_path = os.getenv("GITHUB_STEP_SUMMARY")
+    if summary_path:
+        with open(summary_path, "a") as f:
             f.write(response)
