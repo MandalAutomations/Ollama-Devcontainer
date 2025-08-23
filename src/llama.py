@@ -61,3 +61,32 @@ class llama:
                     print(f"Error decoding JSON: {decoded_line}")
 
         return response_text
+
+    def create_embedding(self, text: str):
+
+        try:
+            resp = requests.post(
+                f"{self.host}/api/embeddings",
+                json={"model": self.model, "prompt": text},
+                timeout=60
+            )
+        except requests.RequestException as e:
+            print(f"Network error creating embedding: {e}")
+            return None
+
+        if resp.status_code != 200:
+            print(f"Error creating embedding: {resp.status_code} {resp.text}")
+            return None
+
+        try:
+            data = resp.json()
+        except json.JSONDecodeError:
+            print(f"Invalid JSON in embedding response: {resp.text[:200]}")
+            return None
+
+        embedding = data.get("embedding")
+        if not isinstance(embedding, list):
+            print(f"Unexpected embedding payload: {data}")
+            return None
+
+        return embedding
