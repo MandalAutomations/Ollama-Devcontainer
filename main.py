@@ -7,8 +7,7 @@ MODEL = "llama3.2:1b" # Find available models here https://ollama.com/library
 
 if __name__ == "__main__":
     llama = llama(OLLAMA_HOST, MODEL)
-    llama.check_and_pull_model()
-
+    
     prompt = sys.argv[1] if len(sys.argv) > 1 else None
     
     if prompt:

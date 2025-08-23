@@ -7,6 +7,7 @@ class llama:
     def __init__(self, host, model): 
         self.model = model
         self.host = host
+        self.check_and_pull_model()
 
     def check_and_pull_model(self):
 
