@@ -26,4 +26,4 @@ def vision_describe(path: str, model: str = "llava") -> str:
     return r.json().get("response", "")
 
 if __name__ == "__main__":
-    print(vision_describe("img/example.png", model="llava"))  # or "qwen2.5-vl"
+    print(vision_describe("img/image.png", model="llava"))  # or "qwen2.5-vl"
