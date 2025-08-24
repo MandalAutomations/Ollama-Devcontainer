@@ -2,7 +2,6 @@ import requests
 import os
 import json
 
-
 class llama: 
     def __init__(self, host, model): 
         self.model = model
@@ -39,6 +38,7 @@ class llama:
 
 
     def generate_response(self, prompt):
+        print(f"{self.host}/api/generate")
         response = requests.post(
             f"{self.host}/api/generate",
             json={"model": self.model, "prompt": prompt},

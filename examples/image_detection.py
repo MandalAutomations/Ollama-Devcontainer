@@ -2,8 +2,14 @@
 import requests, base64
 from io import BytesIO
 from PIL import Image
+import os
+import sys
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+from src.llama import llama
 
-OLLAMA_URL = "http://ollama:11434/api/generate"  # use /api/generate for vision
+OLLAMA_HOST = os.getenv("OLLAMA_HOST", "http://ollama:11434")
+MODEL = "llava"
+llama = llama(OLLAMA_HOST, MODEL)
 
 def img_to_b64(path: str) -> str:
     img = Image.open(path).convert("RGB")
@@ -21,7 +27,11 @@ def vision_describe(path: str, model: str = "llava") -> str:
         "images": [img_to_b64(path)],  # base64-encoded image(s)
         "stream": False
     }
-    r = requests.post(OLLAMA_URL, json=payload, timeout=300)
+    r = requests.post(
+        f"{OLLAMA_HOST}/api/generate",
+        json=payload, 
+        timeout=300
+    )
     r.raise_for_status()
     return r.json().get("response", "")
 
