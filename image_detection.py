@@ -1,0 +1,29 @@
+# pip install requests pillow
+import requests, base64
+from io import BytesIO
+from PIL import Image
+
+OLLAMA_URL = "http://ollama:11434/api/generate"  # use /api/generate for vision
+
+def img_to_b64(path: str) -> str:
+    img = Image.open(path).convert("RGB")
+    buf = BytesIO()
+    img.save(buf, format="JPEG", quality=90)
+    return base64.b64encode(buf.getvalue()).decode("utf-8")
+
+def vision_describe(path: str, model: str = "llava") -> str:
+    payload = {
+        "model": model,
+        "prompt": (
+            "Describe this image briefly, then output strict JSON with objects:\n"
+            '{ "objects": [ { "name": "<object>", "attributes": ["..."] } ] }'
+        ),
+        "images": [img_to_b64(path)],  # base64-encoded image(s)
+        "stream": False
+    }
+    r = requests.post(OLLAMA_URL, json=payload, timeout=300)
+    r.raise_for_status()
+    return r.json().get("response", "")
+
+if __name__ == "__main__":
+    print(vision_describe("img/example.png", model="llava"))  # or "qwen2.5-vl"
