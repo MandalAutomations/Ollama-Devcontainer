@@ -6,6 +6,7 @@ import os
 import sys
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from src.llama import llama
+import json
 
 OLLAMA_HOST = os.getenv("OLLAMA_HOST", "http://ollama:11434")
 MODEL = "llava"
@@ -31,8 +32,20 @@ def vision_describe(path: str, model: str = "llava") -> str:
         json=payload,
         stream=True
     )
-    r.raise_for_status()
-    return r.json().get("response", "")
+    response_text = ""
+    for line in r.iter_lines():
+        if line:
+            try:
+                data = json.loads(line.decode("utf-8"))
+                response_text += data.get("response", "")
+                if data.get("done", False):
+                    break
+            except json.JSONDecodeError as e:
+                print("Bad JSON line:", line, e)
+    
+    return response_text
 
 if __name__ == "__main__":
-    print(vision_describe("img/image.png", model="llava"))  # or "qwen2.5-vl"
+    image="img/image.png"
+    description = vision_describe(image, model="llava")
+    print(description)
