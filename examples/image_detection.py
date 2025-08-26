@@ -24,13 +24,12 @@ def vision_describe(path: str, model: str = "llava") -> str:
             "Describe this image briefly, then output strict JSON with objects:\n"
             '{ "objects": [ { "name": "<object>", "attributes": ["..."] } ] }'
         ),
-        "images": [img_to_b64(path)],  # base64-encoded image(s)
-        "stream": False
+        "images": [img_to_b64(path)]
     }
     r = requests.post(
         f"{OLLAMA_HOST}/api/generate",
-        json=payload, 
-        timeout=300
+        json=payload,
+        stream=True
     )
     r.raise_for_status()
     return r.json().get("response", "")
