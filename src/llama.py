@@ -38,7 +38,6 @@ class llama:
 
 
     def generate_response(self, prompt):
-        print(f"{self.host}/api/generate")
         response = requests.post(
             f"{self.host}/api/generate",
             json={"model": self.model, "prompt": prompt},
