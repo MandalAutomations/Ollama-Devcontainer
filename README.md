@@ -1,4 +1,4 @@
-# Dev-Container-Compose
+# Ollama Dev Container Template
 
 A ready-to-use development environment template for Python projects with integrated LLM capabilities via Ollama.
 
@@ -26,7 +26,7 @@ A ready-to-use development environment template for Python projects with integra
 
 - `.devcontainer/` - Dev Container configuration
 - `src/` - Python source code modules
-- `main.py` - Example script for Ollama interaction
+- `examples/` - Example scripts for embeddings, response generation, and image detection
 - `requirements.txt` - Python dependencies
 
 ## Using Ollama
@@ -61,17 +61,28 @@ Add any required packages to `requirements.txt` and they will be automatically i
 
 ### Using Different Models
 
-Change the model in `main.py` by modifying the `MODEL` constant. The template will automatically pull the model if it's not already available.
+Change the model in the relevant example script (e.g., `examples/generate_response_example.py`) by modifying the model name. The template will automatically pull the model if it's not already available.
 
 ## Running the Example
 
-To run the example script:
+
+## Running Examples
+
+The `main.py` file has been removed. Example functionalities are now provided as separate Python scripts in the `examples/` folder:
+
+- `embedding_example.py`: Example for generating embeddings
+- `generate_response_example.py`: Example for generating responses
+- `image_detection.py`: Example for image detection
+
+To run an example, use:
 
 ```bash
-python main.py
+python examples/embedding_example.py
+python examples/generate_response_example.py
+python examples/image_detection.py
 ```
 
-This will initialize the specified Ollama model and generate a response to the prompt defined in `main.py`.
+Each script will initialize the specified Ollama model and perform its respective task.
 
 ## License
 
