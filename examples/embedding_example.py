@@ -4,7 +4,7 @@ sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from src.llama import llama
 
 OLLAMA_HOST = os.getenv("OLLAMA_HOST", "http://ollama:11434")
-MODEL = "llama3.2:1b" # Find available models here https://ollama.com/library
+MODEL = "nomic-embed-text:latest" # Find available models here https://ollama.com/library
 
 if __name__ == "__main__":
     llama = llama(OLLAMA_HOST, MODEL)
@@ -14,6 +14,6 @@ if __name__ == "__main__":
 
     if embedding:
         print("Embedding created successfully.")
-        print(embedding)
+        print(embedding[0:5])  # Print first 5 values of the embedding
     else:
         print("Failed to create embedding.")

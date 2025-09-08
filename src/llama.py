@@ -3,12 +3,19 @@ import os
 import json
 
 class llama: 
-    def __init__(self, host, model): 
+    def __init__(self, host, model, emdedding_model=None): 
         self.model = model
+        self.emdedding_model = emdedding_model
         self.host = host
-        self.check_and_pull_model()
+        if emdedding_model is None:
+            self.emdedding_model = model
+            
+        if model is not None:
+            self.check_and_pull_model(self.model)
+        if emdedding_model is not None and emdedding_model != model:
+            self.check_and_pull_model(self.emdedding_model)
 
-    def check_and_pull_model(self):
+    def check_and_pull_model(self, model=None):
 
         try:
             response = requests.get(f"{self.host}/api/tags")
@@ -16,12 +23,12 @@ class llama:
             tags_data = response.json()
             available_models = [model['name'] for model in tags_data['models']]
 
-            if self.model in available_models:
-                print(f"Model '{self.model}' is already available in Ollama.")
+            if model in available_models:
+                print(f"Model '{model}' is already available in Ollama.")
                 return
 
-            print(f"Model '{self.model}' not found. Pulling from Ollama...")
-            data = json.dumps({"name": self.model})
+            print(f"Model '{model}' not found. Pulling from Ollama...")
+            data = json.dumps({"name": model})
             response = requests.post(f"{self.host}/api/pull", data=data, stream=True)
             response.raise_for_status()
 
@@ -29,7 +36,7 @@ class llama:
                 if line:
                     decoded_line = line.decode('utf-8')
 
-            print(f"Model '{self.model}' pulled successfully.")
+            print(f"Model '{model}' pulled successfully.")
 
         except requests.exceptions.RequestException as e:
             print(f"Error communicating with Ollama: {e}")
@@ -67,7 +74,7 @@ class llama:
         try:
             resp = requests.post(
                 f"{self.host}/api/embeddings",
-                json={"model": self.model, "prompt": text},
+                json={"model": self.emdedding_model, "prompt": text},
                 timeout=60
             )
         except requests.RequestException as e:
