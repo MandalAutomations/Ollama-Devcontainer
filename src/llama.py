@@ -3,7 +3,7 @@ import os
 import json
 
 class llama: 
-    def __init__(self, host, model, emdedding_model=None): 
+    def __init__(self, host, model=None, emdedding_model=None): 
         self.model = model
         self.emdedding_model = emdedding_model
         self.host = host

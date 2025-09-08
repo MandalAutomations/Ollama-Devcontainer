@@ -4,10 +4,10 @@ sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from src.llama import llama
 
 OLLAMA_HOST = os.getenv("OLLAMA_HOST", "http://ollama:11434")
-MODEL = "nomic-embed-text:latest" # Find available models here https://ollama.com/library
+EMBEDDING_MODEL = "snowflake-arctic-embed:22m" # Find available models here https://ollama.com/library
 
 if __name__ == "__main__":
-    llama = llama(OLLAMA_HOST, MODEL)
+    llama = llama(OLLAMA_HOST, emdedding_model=EMBEDDING_MODEL)
 
     text = "Hello World"
     embedding = llama.create_embedding(text)
@@ -15,5 +15,6 @@ if __name__ == "__main__":
     if embedding:
         print("Embedding created successfully.")
         print(embedding[0:5])  # Print first 5 values of the embedding
+        print(len(embedding))  # Print length of the embedding
     else:
         print("Failed to create embedding.")
