@@ -4,7 +4,7 @@ sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from src.llama import llama
 
 OLLAMA_HOST = os.getenv("OLLAMA_HOST", "http://ollama:11434")
-EMBEDDING_MODEL = "snowflake-arctic-embed:22m" # Find available models here https://ollama.com/library
+EMBEDDING_MODEL = "nomic-embed-text:latest" # Find available models here https://ollama.com/library
 
 if __name__ == "__main__":
     llama = llama(OLLAMA_HOST, emdedding_model=EMBEDDING_MODEL)
@@ -19,4 +19,5 @@ if __name__ == "__main__":
     else:
         print("Failed to create embedding.")
         
-    llama.remove_model(EMBEDDING_MODEL)
+    llama.remove_all_models()
+        
