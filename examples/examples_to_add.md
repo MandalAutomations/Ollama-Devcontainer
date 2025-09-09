@@ -1,4 +1,3 @@
-- **benchmark.py** - Script to benchmark the performance (speed, accuracy) of your models or pipelines.
 
 - **visualize_embeddings.py** - Script to visualize text or image embeddings using PCA or t-SNE (e.g., with matplotlib).
 

@@ -9,7 +9,7 @@ from src.llama import llama
 import json
 
 OLLAMA_HOST = os.getenv("OLLAMA_HOST", "http://ollama:11434")
-MODEL = "llava"
+MODEL = "granite3.2-vision:latest"
 llama = llama(OLLAMA_HOST, MODEL)
 
 def img_to_b64(path: str) -> str:

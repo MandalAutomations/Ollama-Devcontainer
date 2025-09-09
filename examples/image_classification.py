@@ -2,7 +2,7 @@ import os
 from PIL import Image
 
 def classify_image(image_path):
-    return os.path.basename(image_path).split('.')[0]
+        return os.path.basename(image_path).split('.')[0]
 
 def main():
     img_dir = os.path.join(os.path.dirname(__file__), 'img')
