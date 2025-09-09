@@ -18,3 +18,5 @@ if __name__ == "__main__":
         print(len(embedding))  # Print length of the embedding
     else:
         print("Failed to create embedding.")
+        
+    llama.remove_model(EMBEDDING_MODEL)

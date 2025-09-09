@@ -43,6 +43,18 @@ class llama:
         except (KeyError, json.JSONDecodeError) as e:
             print(f"Error parsing Ollama response: {e}")
 
+    def remove_model(self, model_name):
+        """Remove a model from Ollama"""
+        try:
+            response = requests.delete(f"{self.host}/api/delete", json={"name": model_name})
+            response.raise_for_status()
+            
+            print(f"Model '{model_name}' removed successfully.")
+            return True
+            
+        except requests.exceptions.RequestException as e:
+            print(f"Error removing model '{model_name}': {e}")
+            return False
 
     def generate_response(self, prompt):
         response = requests.post(
