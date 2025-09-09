@@ -43,8 +43,11 @@ By default, the template is configured to use `gemma3:1b`. You can use any model
 # Import the Llama client
 from src.llama import llama
 
+OLLAMA_HOST = os.getenv("OLLAMA_HOST", "http://ollama:11434")
+MODEL = "llama3.2:1b" # Find available models here https://ollama.com/library
+
 # Initialize with Ollama host and model
-client = llama("http://ollama:11434", "gemma3:1b")
+client = llama(OLLAMA_HOST, MODEL)
 
 # Pull the model if not already available
 client.check_and_pull_model()
@@ -70,15 +73,15 @@ Change the model in the relevant example script (e.g., `examples/generate_respon
 
 The `main.py` file has been removed. Example functionalities are now provided as separate Python scripts in the `examples/` folder:
 
-- `embedding_example.py`: Example for generating embeddings
-- `generate_response_example.py`: Example for generating responses
+- `embedding.py`: Example for generating embeddings
+- `generate_response.py`: Example for generating responses
 - `image_detection.py`: Example for image detection
 
 To run an example, use:
 
 ```bash
-python examples/embedding_example.py
-python examples/generate_response_example.py
+python examples/embedding.py
+python examples/generate_response.py
 python examples/image_detection.py
 ```
 
