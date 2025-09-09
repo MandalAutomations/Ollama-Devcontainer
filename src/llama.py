@@ -3,19 +3,20 @@ import os
 import json
 
 class llama: 
-    def __init__(self, host, model=None, emdedding_model=None): 
+    def __init__(self, host, model=None, embedding_model=None): 
         self.model = model
-        self.emdedding_model = emdedding_model
+        self.embedding_model = embedding_model
         self.host = host
-        if emdedding_model is None:
-            self.emdedding_model = model
+        if embedding_model is None:
+            self.embedding_model = model
             
         if model is not None:
             self.check_and_pull_model(self.model)
-        if emdedding_model is not None and emdedding_model != model:
-            self.check_and_pull_model(self.emdedding_model)
+        if embedding_model is not None and embedding_model != model:
+            self.check_and_pull_model(self.embedding_model)
 
     def get_all_models(self):
+        """ Get a list of all models available in Ollama"""
         try:
             response = requests.get(f"{self.host}/api/tags")
             response.raise_for_status()  # Raise HTTPError for bad responses (4xx or 5xx)
@@ -31,7 +32,7 @@ class llama:
             return []
         
     def check_and_pull_model(self, model=None):
-
+        """ Check if a model is available in Ollama, if not pull it """
         try:
             available_models = self.get_all_models()
 
@@ -56,9 +57,8 @@ class llama:
             print(f"Error parsing Ollama response: {e}")
 
     def remove_all_models(self):
-        """Remove all models from Ollama"""
+        """ Remove all models from Ollama """
         try:
-            response = requests.get(f"{self.host}/api/tags")
             available_models = self.get_all_models()
 
             for model_name in available_models:
@@ -72,7 +72,7 @@ class llama:
             return False
         
     def remove_model(self, model_name):
-        """Remove a model from Ollama"""
+        """ Remove a model from Ollama """
         try:
             response = requests.delete(f"{self.host}/api/delete", json={"name": model_name})
             response.raise_for_status()
@@ -85,6 +85,7 @@ class llama:
             return False
 
     def generate_response(self, prompt):
+        """ Generate a response from the model """
         response = requests.post(
             f"{self.host}/api/generate",
             json={"model": self.model, "prompt": prompt},
@@ -110,11 +111,11 @@ class llama:
         return response_text
 
     def create_embedding(self, text: str):
-
+        """ Create an embedding from the text using the embedding model """
         try:
             resp = requests.post(
                 f"{self.host}/api/embeddings",
-                json={"model": self.emdedding_model, "prompt": text},
+                json={"model": self.embedding_model, "prompt": text},
                 timeout=60
             )
         except requests.RequestException as e:
