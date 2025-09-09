@@ -1,5 +1,5 @@
 Model,avg_response_time(s),Dimensions
 embeddinggemma:latest,0.80,768
-nomic-embed-text:latest,0.21,768
-snowflake-arctic-embed:22m,0.09,384
+nomic-embed-text:latest,0.12,768
+snowflake-arctic-embed:22m,0.02,384
 mxbai-embed-large:latest,0.75,1024

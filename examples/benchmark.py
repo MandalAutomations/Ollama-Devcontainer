@@ -30,6 +30,7 @@ prompts = [
 ]
 
 def print_to_csv(data, filename="data/results.csv"):
+    os.makedirs(os.path.dirname(filename), exist_ok=True)
     with open(filename, 'a') as f:
         f.write(f"{data}\n")
 
