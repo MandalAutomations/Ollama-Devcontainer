@@ -15,13 +15,25 @@ class llama:
         if emdedding_model is not None and emdedding_model != model:
             self.check_and_pull_model(self.emdedding_model)
 
-    def check_and_pull_model(self, model=None):
-
+    def get_all_models(self):
         try:
             response = requests.get(f"{self.host}/api/tags")
             response.raise_for_status()  # Raise HTTPError for bad responses (4xx or 5xx)
             tags_data = response.json()
             available_models = [model['name'] for model in tags_data['models']]
+            return available_models
+
+        except requests.exceptions.RequestException as e:
+            print(f"Error communicating with Ollama: {e}")
+            return []
+        except (KeyError, json.JSONDecodeError) as e:
+            print(f"Error parsing Ollama response: {e}")
+            return []
+        
+    def check_and_pull_model(self, model=None):
+
+        try:
+            available_models = self.get_all_models()
 
             if model in available_models:
                 print(f"Model '{model}' is already available in Ollama.")
@@ -47,12 +59,9 @@ class llama:
         """Remove all models from Ollama"""
         try:
             response = requests.get(f"{self.host}/api/tags")
-            response.raise_for_status()
-            tags_data = response.json()
-            available_models = [model['name'] for model in tags_data['models']]
+            available_models = self.get_all_models()
 
             for model_name in available_models:
-                print(f"Removing model: {model_name}")
                 self.remove_model(model_name)
 
             print("All models removed successfully.")

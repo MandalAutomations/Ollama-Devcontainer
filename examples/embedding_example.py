@@ -19,5 +19,3 @@ if __name__ == "__main__":
     else:
         print("Failed to create embedding.")
         
-    llama.remove_all_models()
-        
