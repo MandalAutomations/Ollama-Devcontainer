@@ -8,6 +8,18 @@ OLLAMA_HOST = os.getenv("OLLAMA_HOST", "http://ollama:11434")
 MODEL = None #"llama3.2:1b" # Find available models here https://ollama.com/library
 EMBEDDING_MODEL = "embeddinggemma:latest" # Find available models here https://ollama.com/library
 
+models = [
+    # "llama3.2:1b",
+    # "gemma3:270m"
+]
+
+embedding_models = [
+    "embeddinggemma:latest",
+    "nomic-embed-text:latest",
+    "snowflake-arctic-embed:22m",
+    "mxbai-embed-large:latest"
+]
+
 # Example prompts for benchmarking
 prompts = [
     "What is the capital of France?",
@@ -16,6 +28,10 @@ prompts = [
     "Translate 'hello' to Spanish.",
     "List three uses for a paperclip."
 ]
+
+def print_to_csv(data, filename="data/results.csv"):
+    with open(filename, 'a') as f:
+        f.write(f"{data}\n")
 
 def benchmark_generation(llama_client, prompts):
     times = []
@@ -26,7 +42,8 @@ def benchmark_generation(llama_client, prompts):
         times.append(elapsed)
 
     avg_time = sum(times) / len(times)
-    print(f"Average generation time: {avg_time:.2f} seconds")
+    result=f"{llama_client.model},{avg_time:.2f}"
+    print_to_csv(result)
 
 def benchmark_embedding(llama_client, prompts):
     times = []
@@ -39,14 +56,21 @@ def benchmark_embedding(llama_client, prompts):
         dim = len(embed) if embed else 0
 
     avg_time = sum(times) / len(times)
-    print(f"Average embedding time: {avg_time:.2f} seconds")
-    print(f"Embedding dimension: {dim}")
+    result=f"{llama_client.embedding_model},{avg_time:.2f},{dim}"
+    print_to_csv(result)
 
 if __name__ == "__main__":
-    llama_client = llama(OLLAMA_HOST, model=MODEL, embedding_model=EMBEDDING_MODEL)
-    if MODEL is not None:
-        print("Benchmarking response generation for model:", MODEL)
+
+    llama_client = llama(OLLAMA_HOST)
+    llama_client.remove_all_models()
+    print_to_csv("Model,avg_response_time(s),Dimensions")
+
+    for model in models:
+        llama_client = llama(OLLAMA_HOST, model=model)
+        print("Benchmarking response generation for model:", model)
         benchmark_generation(llama_client, prompts)
-    if EMBEDDING_MODEL is not None:
-        print("Benchmarking embedding creation for model:", EMBEDDING_MODEL)
+        
+    for embedding_model in embedding_models:
+        llama_client = llama(OLLAMA_HOST, embedding_model=embedding_model)
+        print("Benchmarking embedding creation for model:", llama_client.embedding_model)
         benchmark_embedding(llama_client, prompts)
