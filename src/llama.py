@@ -118,13 +118,10 @@ class llama:
         img.save(buf, format="JPEG", quality=90)
         return base64.b64encode(buf.getvalue()).decode("utf-8")
 
-    def vision_describe(self, path):
+    def vision_describe(self, path, prompt):
         payload = {
             "model": self.model,
-            "prompt": (
-                "Describe this image briefly, then output strict JSON with objects:\n"
-                '{ "objects": [ { "name": "<object>", "attributes": ["..."] } ] }'
-            ),
+            "prompt": prompt,
             "images": [self.img_to_b64(path)]
         }
         r = requests.post(

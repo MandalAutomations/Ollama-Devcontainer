@@ -1,0 +1,3 @@
+Model 'moondream:latest' is already available in Ollama.
+Type: bird, Label: bird 1, Color: red, Size: large, Position: [0.25, 0.23, 0.53, 0.6]
+Type: bird, Label: bird 2, Color: gray, Size: small, Position: [0.51, 0.22, 0.83, 0.61]
