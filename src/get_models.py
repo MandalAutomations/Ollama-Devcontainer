@@ -24,10 +24,7 @@ def get_models():
                     tags.append(span.get_text().strip()) 
                 elif 'bg-[#ddf4ff]' in span.get('class', []):
                     parameter_sizes.append(span.get_text().strip())
-        # print(title)
-        # print(tags)
-        # print(parameter_sizes)
-        # print("-----")
+
         models_data.append({
             'name': title,
             'parameter_sizes': parameter_sizes,
@@ -35,7 +32,6 @@ def get_models():
         })
 
     return models_data
-
 
 def create_markdown():
     table_format = "| Model Name | Category | Parameter Sizes |\n|------------------|-------------|-------------|\n"
