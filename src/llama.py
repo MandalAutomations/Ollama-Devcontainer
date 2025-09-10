@@ -1,6 +1,8 @@
-import requests
+import requests, base64
 import os
 import json
+from PIL import Image
+from io import BytesIO
 
 class llama: 
     def __init__(self, host, model=None, embedding_model=None): 
@@ -108,6 +110,40 @@ class llama:
                 except json.JSONDecodeError:
                     print(f"Error decoding JSON: {decoded_line}")
 
+        return response_text
+
+    def img_to_b64(self, path):
+        img = Image.open(path).convert("RGB")
+        buf = BytesIO()
+        img.save(buf, format="JPEG", quality=90)
+        return base64.b64encode(buf.getvalue()).decode("utf-8")
+
+    def vision_describe(self, path):
+        payload = {
+            "model": self.model,
+            "prompt": (
+                "Describe this image briefly, then output strict JSON with objects:\n"
+                '{ "objects": [ { "name": "<object>", "attributes": ["..."] } ] }'
+            ),
+            "images": [self.img_to_b64(path)]
+        }
+        r = requests.post(
+            f"{self.host}/api/generate",
+            json=payload,
+            stream=True
+        )
+        r.status_code == 200 or print("Error:", r.text)
+        response_text = ""
+        for line in r.iter_lines():
+            if line:
+                try:
+                    data = json.loads(line.decode("utf-8"))
+                    response_text += data.get("response", "")
+                    if data.get("done", False):
+                        break
+                except json.JSONDecodeError as e:
+                    print("Bad JSON line:", line, e)
+        
         return response_text
 
     def create_embedding(self, text: str):
