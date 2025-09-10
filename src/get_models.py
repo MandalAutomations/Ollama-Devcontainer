@@ -1,8 +1,5 @@
 import requests
 from bs4 import BeautifulSoup
-import os
-import sys
-from llama import llama
 
 def get_models():
     url = "https://ollama.com/library"
