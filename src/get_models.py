@@ -12,6 +12,8 @@ def get_models():
     for card in model_cards:
         div = card.find('div', {'class': 'flex flex-col', 'x-test-model-title': ''})
         title = div.get('title')
+        updated = card.find('span', attrs={'x-test-updated': ''})
+        updated = updated.get_text(strip=True) if updated else "N/A"
         
         spans_div = card.find('div', class_='flex flex-wrap space-x-2')
         parameter_sizes = []
@@ -28,19 +30,21 @@ def get_models():
         models_data.append({
             'name': title,
             'parameter_sizes': parameter_sizes,
-            'tags': tags
+            'tags': tags,
+            'last_updated': updated
         })
 
     return models_data
 
 def create_markdown():
-    table_format = "| Model Name | Category | Parameter Sizes |\n|------------------|-------------|-------------|\n"
+    table_format = "| Model Name | Category | Parameter Sizes | Last Updated |\n|------------------|-------------|-------------|----------------|\n"
     models = get_models()
     for model in models:
         name = model['name']
         sizes = ", ".join(model['parameter_sizes']) if model['parameter_sizes'] else "N/A"
         categories = ", ".join(model['tags']) if model['tags'] else "N/A"
-        table_format += f"| {name} | {categories} | {sizes} |\n"
+        last_updated = model['last_updated']
+        table_format += f"| {name} | {categories} | {sizes} | {last_updated} |\n"
 
     with open("AVAILABLE_MODELS.md", "w") as f:
         f.write("# Available Ollama Models\n\n")
