@@ -3,6 +3,7 @@ import os
 import json
 from PIL import Image
 from io import BytesIO
+import re
 
 class llama: 
     def __init__(self, host, model=None, embedding_model=None): 

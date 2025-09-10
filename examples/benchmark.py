@@ -29,7 +29,7 @@ prompts = [
     "List three uses for a paperclip."
 ]
 
-def print_to_csv(data, filename="data/results.csv"):
+def print_to_csv(data, filename="data/benchmark_results.csv"):
     os.makedirs(os.path.dirname(filename), exist_ok=True)
     with open(filename, 'a') as f:
         f.write(f"{data}\n")

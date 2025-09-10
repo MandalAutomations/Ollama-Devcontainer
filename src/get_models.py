@@ -1,62 +1,58 @@
-# import requests
-# from bs4 import BeautifulSoup
-# import os
-# import sys
-# from src.llama import llama
+import requests
+from bs4 import BeautifulSoup
+import os
+import sys
+from llama import llama
 
-# def get_models():
-#     url = "https://ollama.com/library"
-#     response = requests.get(url)
-#     response.raise_for_status()
+def get_models():
+    url = "https://ollama.com/library"
+    response = requests.get(url)
+    response.raise_for_status()
 
-#     soup = BeautifulSoup(response.text, 'html.parser')
-#     model_cards = soup.select("a[href^='/library/']")
-#     models_data = []
+    soup = BeautifulSoup(response.text, 'html.parser')
+    model_cards = soup.select("a[href^='/library/']")
+    models_data = []
+    for card in model_cards:
+        div = card.find('div', {'class': 'flex flex-col', 'x-test-model-title': ''})
+        title = div.get('title')
+        
+        spans_div = card.find('div', class_='flex flex-wrap space-x-2')
+        parameter_sizes = []
+        tags = []
+        
+        if spans_div:
+            spans = spans_div.find_all('span')
+            for span in spans:
+                if 'bg-indigo-50' in span.get('class', []):
+                    tags.append(span.get_text().strip()) 
+                elif 'bg-[#ddf4ff]' in span.get('class', []):
+                    parameter_sizes.append(span.get_text().strip())
+        # print(title)
+        # print(tags)
+        # print(parameter_sizes)
+        # print("-----")
+        models_data.append({
+            'name': title,
+            'parameter_sizes': parameter_sizes,
+            'tags': tags
+        })
 
-#     print(model_cards[0])
-#     # for card in model_cards:
-#     #     name = card.text.strip()
-#     #     href = card.get("href")
-
-#     #     print(name)
-#     #     models_data.append({
-#     #         "Model Name": name,
-#     #         "Parameter Sizes": "?",      # Needs additional scraping if available
-#     #         "Category": "?",             # Could use name to guess or check model page
-#     #         "Last Updated": "?"          # Not shown on main page, possibly in subpages
-#     #     })
-
-#     return models_data
+    return models_data
 
 
-# # def create_markdown():
-# #     OLLAMA_HOST = os.getenv("OLLAMA_HOST", "http://ollama:11434")
-# #     MODEL = "gemma3:1b" # Find available models here https://ollama.com/library
-    
-# #     llama_instance = llama(OLLAMA_HOST, MODEL)
-# #     llama_instance.check_and_pull_model()
+def create_markdown():
+    table_format = "| Model Name | Category | Parameter Sizes |\n|------------------|-------------|-------------|\n"
+    models = get_models()
+    for model in models:
+        name = model['name']
+        sizes = ", ".join(model['parameter_sizes']) if model['parameter_sizes'] else "N/A"
+        categories = ", ".join(model['tags']) if model['tags'] else "N/A"
+        table_format += f"| {name} | {categories} | {sizes} |\n"
 
-# #     table_format = "| Model Name | Parameter Sizes | Category | Last Updated |\n|------------|-------------|-------------|-------------|\n"
-# #     models = get_models()
+    with open("AVAILABLE_MODELS.md", "w") as f:
+        f.write("# Available Ollama Models\n\n")
+        f.write("This document lists the available models from Ollama along with their categories and parameter sizes.\n\n")
+        f.write(table_format)
 
-# #     prompt = f"Generate a markdown table in this format {table_format} from the following text: {models}"
-
-# #     response = llama_instance.generate_response(prompt)
-# #     print(response)
-
-# # if __name__ == "__main__":
-# #     create_markdown()
-
-# get_models()
-
-from playwright.sync_api import sync_playwright
-
-# playwright install
-# playwright install-deps
-
-with sync_playwright() as p:
-    browser = p.chromium.launch()
-    page = browser.new_page()
-    page.goto("https://ollama.com/library")
-    page.screenshot(path="website_screenshot.png", full_page=True)
-    browser.close()
+if __name__ == "__main__":
+    create_markdown()
