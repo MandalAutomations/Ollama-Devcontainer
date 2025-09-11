@@ -14,6 +14,13 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
+      - name: Create GitHub App Token
+        id: get_app_token
+        uses: actions/create-github-app-token@v1
+        with:
+          app-id: ${{ secrets.APP_ID }}
+          private-key: ${{ secrets.APP_PRIVATE_KEY }}
+
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
@@ -34,4 +41,4 @@ jobs:
             git commit -m 'Update AVAILABLE_MODELS.md' || echo "No changes to commit"
             git push
         env:
-            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+            GITHUB_TOKEN: ${{ steps.get_app_token.outputs.token }}
