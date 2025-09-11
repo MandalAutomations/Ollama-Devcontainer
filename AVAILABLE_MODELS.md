@@ -148,7 +148,7 @@ This document lists the available models from Ollama along with their categories
 | medllama2 | N/A | 7b | 1 year ago |
 | nous-hermes2-mixtral | N/A | 8x7b | 8 months ago |
 | stable-beluga | N/A | 7b, 13b, 70b | 1 year ago |
-| deepseek-v2.5 | N/A | 236b | 12 months ago |
+| deepseek-v2.5 | N/A | 236b | 1 year ago |
 | reader-lm | N/A | 0.5b, 1.5b | 1 year ago |
 | llama-pro | N/A | N/A | 1 year ago |
 | yarn-mistral | N/A | 7b | 1 year ago |
