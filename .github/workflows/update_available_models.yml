@@ -32,11 +32,22 @@ jobs:
 
       - name: Run Python script
         run: python src/get_models.py
+      
+      - name: Get GitHub App User ID
+        id: get-user-id
+        run: echo "user-id=$(gh api "/users/${{ steps.generate-token.outputs.app-slug }}[bot]" --jq .id)" >> "$GITHUB_OUTPUT"
+        env:
+          GH_TOKEN: ${{ steps.generate-token.outputs.token }}
+
+      - name: Set Commiter
+        run: |
+          git config --global user.name '${{ steps.generate-token.outputs.app-slug }}[bot]'
+          git config --global user.email '${{ steps.get-user-id.outputs.user-id }}+${{ steps.generate-token.outputs.app-slug }}[bot]@users.noreply.github.com'
 
       - name: Commit and push changes
         run: |
-            git config --global user.name 'MandelAuto-App[bot]'
-            git config --global user.email 'MandelAuto-App[bot]@users.noreply.github.com'
+            # git config --global user.name 'MandelAuto-App[bot]'
+            # git config --global user.email 'MandelAuto-App[bot]@users.noreply.github.com'
             git add AVAILABLE_MODELS.md
             git commit -m 'Update AVAILABLE_MODELS.md' || echo "No changes to commit"
             git push
