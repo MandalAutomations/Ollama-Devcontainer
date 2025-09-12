@@ -168,8 +168,8 @@ This document lists the available models from Ollama along with their categories
 | magicoder | N/A | 7b | 1 year ago |
 | mistrallite | N/A | 7b | 1 year ago |
 | codebooga | N/A | 34b | 1 year ago |
-| bespoke-minicheck | N/A | 7b | 11 months ago |
 | deepseek-v3.1 | tools, thinking | 671b | 1 week ago |
+| bespoke-minicheck | N/A | 7b | 11 months ago |
 | wizard-vicuna | N/A | 13b | 1 year ago |
 | nuextract | N/A | 3.8b | 1 year ago |
 | granite3-guardian | N/A | 2b, 8b | 9 months ago |
