@@ -126,15 +126,15 @@ This document lists the available models from Ollama along with their categories
 | r1-1776 | N/A | 70b, 671b | 6 months ago |
 | tulu3 | N/A | 8b, 70b | 8 months ago |
 | nemotron-mini | tools | 4b | 11 months ago |
-| starling-lm | N/A | 7b | 1 year ago |
 | paraphrase-multilingual | embedding | 278m | 1 year ago |
+| starling-lm | N/A | 7b | 1 year ago |
 | solar | N/A | 10.7b | 1 year ago |
 | phind-codellama | N/A | 34b | 1 year ago |
 | internlm2 | N/A | 1m, 1.8b, 7b, 20b | 1 year ago |
 | xwinlm | N/A | 7b, 13b | 1 year ago |
-| athene-v2 | tools | 72b | 9 months ago |
+| athene-v2 | tools | 72b | 10 months ago |
 | granite-embedding | embedding | 30m, 278m | 8 months ago |
-| nemotron | tools | 70b | 10 months ago |
+| nemotron | tools | 70b | 11 months ago |
 | llama3-groq-tool-use | tools | 8b, 70b | 1 year ago |
 | yarn-llama2 | N/A | 7b, 13b | 1 year ago |
 | meditron | N/A | 7b, 70b | 1 year ago |
@@ -182,4 +182,4 @@ This document lists the available models from Ollama along with their categories
 | goliath | N/A | N/A | 1 year ago |
 | alfred | N/A | 40b | 1 year ago |
 | command-r7b-arabic | tools | 7b | 6 months ago |
-| embeddinggemma | embedding | 300m | 2 days ago |
+| embeddinggemma | embedding | 300m | 3 days ago |
