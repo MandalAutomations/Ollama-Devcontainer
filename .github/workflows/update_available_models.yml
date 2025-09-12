@@ -9,10 +9,12 @@ jobs:
   run-python:
     runs-on: ubuntu-latest
     permissions:
-      contents: write
+      contents: write   # affects only the workflow GITHUB_TOKEN; OK to keep
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
+        with:
+          persist-credentials: false   # IMPORTANT: don't keep the default GITHUB_TOKEN creds
 
       - name: Create GitHub App Token
         id: get_app_token
@@ -32,25 +34,20 @@ jobs:
 
       - name: Run Python script
         run: python src/get_models.py
-      
-      - name: Get GitHub App User ID
-        id: get-user-id
-        run: echo "user-id=$(gh api "/users/${{ steps.generate-token.outputs.app-slug }}[bot]" --jq .id)" >> "$GITHUB_OUTPUT"
-        env:
-          GH_TOKEN: ${{ steps.get_app_token.outputs.token }}
 
-      - name: Set Commiter
-        run: |
-          git config --global user.name '${{ steps.generate-token.outputs.app-slug }}[bot]'
-          git config --global user.email '${{ steps.get-user-id.outputs.user-id }}+${{ steps.generate-token.outputs.app-slug }}[bot]@users.noreply.github.com'
-          
-          echo "Comitter set to: $(git config --global user.name) <$(git config --global user.email)>"
-      - name: Commit and push changes
-        run: |
-            # git config --global user.name 'MandelAuto-App[bot]'
-            # git config --global user.email 'MandelAuto-App[bot]@users.noreply.github.com'
-            git add AVAILABLE_MODELS.md
-            git commit -m 'Update AVAILABLE_MODELS.md' || echo "No changes to commit"
-            git push
+      - name: Configure git user and remote to use App token
         env:
-            GITHUB_TOKEN: ${{ steps.get_app_token.outputs.token }}
+          APP_TOKEN: ${{ steps.get_app_token.outputs.token }}
+        run: |
+          git config --global user.name 'MandelAuto-App[bot]'
+          git config --global user.email 'MandelAuto-App[bot]@users.noreply.github.com'
+          # Make the repo path "safe" inside the runner container
+          git config --global --add safe.directory "$GITHUB_WORKSPACE"
+          # Rewrite origin to authenticate with the App installation token
+          git remote set-url origin "https://x-access-token:${APP_TOKEN}@github.com/${{ github.repository }}"
+
+      - name: Commit and push changes with App token
+        run: |
+          git add AVAILABLE_MODELS.md
+          git commit -m 'Update AVAILABLE_MODELS.md' || echo "No changes to commit"
+          git push
