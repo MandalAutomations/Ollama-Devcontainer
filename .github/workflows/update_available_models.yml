@@ -37,7 +37,7 @@ jobs:
         id: get-user-id
         run: echo "user-id=$(gh api "/users/${{ steps.generate-token.outputs.app-slug }}[bot]" --jq .id)" >> "$GITHUB_OUTPUT"
         env:
-          GH_TOKEN: ${{ steps.generate-token.outputs.token }}
+          GH_TOKEN: ${{ steps.get_app_token.outputs.token }}
 
       - name: Set Commiter
         run: |
