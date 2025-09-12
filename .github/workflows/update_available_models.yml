@@ -9,12 +9,12 @@ jobs:
   run-python:
     runs-on: ubuntu-latest
     permissions:
-      contents: write   # affects only the workflow GITHUB_TOKEN; OK to keep
+      contents: write 
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
         with:
-          persist-credentials: false   # IMPORTANT: don't keep the default GITHUB_TOKEN creds
+          persist-credentials: false  
 
       - name: Create GitHub App Token
         id: get_app_token
@@ -39,11 +39,9 @@ jobs:
         env:
           APP_TOKEN: ${{ steps.get_app_token.outputs.token }}
         run: |
-          git config --global user.name 'MandelAuto-App[bot]'
-          git config --global user.email 'MandelAuto-App[bot]@users.noreply.github.com'
-          # Make the repo path "safe" inside the runner container
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
           git config --global --add safe.directory "$GITHUB_WORKSPACE"
-          # Rewrite origin to authenticate with the App installation token
           git remote set-url origin "https://x-access-token:${APP_TOKEN}@github.com/${{ github.repository }}"
 
       - name: Commit and push changes with App token
