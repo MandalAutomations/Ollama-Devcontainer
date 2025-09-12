@@ -4,7 +4,7 @@ This document lists the available models from Ollama along with their categories
 
 | Model Name | Category | Parameter Sizes | Last Updated |
 |------------------|-------------|-------------|----------------|
-| gpt-oss | tools, thinking | 20b, 120b | 10 month ago |
+| gpt-oss | tools, thinking | 20b, 120b | 1 month ago |
 | deepseek-r1 | tools, thinking | 1.5b, 7b, 8b, 14b, 32b, 70b, 671b | 2 months ago |
 | gemma3 | vision | 270m, 1b, 4b, 12b, 27b | 4 weeks ago |
 | qwen3 | tools, thinking | 0.6b, 1.7b, 4b, 8b, 14b, 30b, 32b, 235b | 1 month ago |
