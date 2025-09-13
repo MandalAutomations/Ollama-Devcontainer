@@ -7,7 +7,9 @@ This document lists the available models from Ollama along with their categories
 | gpt-oss | tools, thinking | 20b, 120b | 1 month ago |
 | deepseek-r1 | tools, thinking | 1.5b, 7b, 8b, 14b, 32b, 70b, 671b | 2 months ago |
 | gemma3 | vision | 270m, 1b, 4b, 12b, 27b | 4 weeks ago |
+| embeddinggemma | embedding | 300m | 4 days ago |
 | qwen3 | tools, thinking | 0.6b, 1.7b, 4b, 8b, 14b, 30b, 32b, 235b | 1 month ago |
+| deepseek-v3.1 | tools, thinking | 671b | 1 week ago |
 | llama3.1 | tools | 8b, 70b, 405b | 9 months ago |
 | nomic-embed-text | embedding | N/A | 1 year ago |
 | llama3.2 | tools | 1b, 3b | 11 months ago |
@@ -106,8 +108,8 @@ This document lists the available models from Ollama along with their categories
 | neural-chat | N/A | 7b | 1 year ago |
 | wizardcoder | N/A | 33b | 1 year ago |
 | command-r-plus | tools | 104b | 1 year ago |
-| bakllava | vision | 7b | 1 year ago |
 | opencoder | N/A | 1.5b, 8b | 9 months ago |
+| bakllava | vision | 7b | 1 year ago |
 | bge-large | embedding | 335m | 1 year ago |
 | sqlcoder | N/A | 7b, 15b | 1 year ago |
 | stablelm2 | N/A | 1.6b, 12b | 1 year ago |
@@ -168,7 +170,6 @@ This document lists the available models from Ollama along with their categories
 | magicoder | N/A | 7b | 1 year ago |
 | mistrallite | N/A | 7b | 1 year ago |
 | codebooga | N/A | 34b | 1 year ago |
-| deepseek-v3.1 | tools, thinking | 671b | 1 week ago |
 | bespoke-minicheck | N/A | 7b | 11 months ago |
 | wizard-vicuna | N/A | 13b | 1 year ago |
 | nuextract | N/A | 3.8b | 1 year ago |
@@ -181,5 +182,4 @@ This document lists the available models from Ollama along with their categories
 | firefunction-v2 | tools | 70b | 1 year ago |
 | goliath | N/A | N/A | 1 year ago |
 | alfred | N/A | 40b | 1 year ago |
-| embeddinggemma | embedding | 300m | 3 days ago |
 | command-r7b-arabic | tools | 7b | 6 months ago |
