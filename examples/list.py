@@ -11,6 +11,6 @@ if __name__ == "__main__":
 
     print(llama.get_all_models())
     
-    llama.remove_model("tinyllama:1.1b")
+    # llama.remove_all_models()
     
-    print(llama.get_all_models())
+    # print(llama.get_all_models())

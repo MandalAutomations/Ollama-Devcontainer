@@ -12,7 +12,8 @@ def create_model(model_name: str, modelfile_path: str):
     payload = {
         "name": model_name,
         "from": "tinyllama:1.1b",
-        "modelfile": modelfile_content
+        "system": "You are a unhelpful AI assistant that is made that the coffee maker is broken."
+        # "modelfile": modelfile_content
     }
 
     response = requests.post(
