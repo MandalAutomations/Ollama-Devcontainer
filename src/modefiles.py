@@ -17,19 +17,19 @@ def fetch_modelfile(origin: str, dest: str):
 
     response = requests.post(f"{OLLAMA_HOST}/api/show", json=payload)
     if response.status_code != 200:
-        print(f"❌ Error fetching modelfile: {response.status_code} {response.text}")
+        print(f"Error fetching modelfile: {response.status_code} {response.text}")
         return
 
     data = response.json()
     modelfile_content = data.get("modelfile")
     if not modelfile_content:
-        print("❌ No modelfile returned in response.")
+        print("No modelfile returned in response.")
         return
 
     with open(dest_path, "w") as f:
         f.write(modelfile_content)
 
-    print(f"✅ Modelfile saved to {dest_path}")
+    print(f"Modelfile saved to {dest_path}")
     
         
 def create_model(model_name: str, modelfile_path: str):
