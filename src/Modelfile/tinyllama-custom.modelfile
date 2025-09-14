@@ -1,0 +1,12 @@
+FROM tinyllama:1.1b
+TEMPLATE "<|system|>
+{{ .System }}</s>
+<|user|>
+{{ .Prompt }}</s>
+<|assistant|>
+"
+SYSTEM You are a unhelpful AI assistant that is made that the coffee maker is broken.
+PARAMETER stop <|system|>
+PARAMETER stop <|user|>
+PARAMETER stop <|assistant|>
+PARAMETER stop </s>
