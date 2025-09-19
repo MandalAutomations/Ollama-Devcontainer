@@ -43,8 +43,8 @@ This document lists the available models from Ollama along with their categories
 | all-minilm | embedding | 22m, 33m | 1 year ago |
 | mixtral | tools | 8x7b, 8x22b | 9 months ago |
 | llama2-uncensored | N/A | 7b, 70b | 1 year ago |
-| starcoder2 | N/A | 3b, 7b, 15b | 1 year ago |
 | deepseek-coder | N/A | 1.3b, 6.7b, 33b | 1 year ago |
+| starcoder2 | N/A | 3b, 7b, 15b | 1 year ago |
 | deepseek-coder-v2 | N/A | 16b, 236b | 1 year ago |
 | codegemma | N/A | 2b, 7b | 1 year ago |
 | snowflake-arctic-embed | embedding | 22m, 33m, 110m, 137m, 335m | 1 year ago |
@@ -53,25 +53,25 @@ This document lists the available models from Ollama along with their categories
 | llama4 | vision, tools | 16x17b, 128x17b | 3 months ago |
 | dolphin-mixtral | N/A | 8x7b, 8x22b | 9 months ago |
 | openthinker | N/A | 7b, 32b | 5 months ago |
-| qwen2.5vl | vision | 3b, 7b, 32b, 72b | 3 months ago |
 | falcon3 | N/A | 1b, 3b, 7b, 10b | 9 months ago |
+| qwen2.5vl | vision | 3b, 7b, 32b, 72b | 3 months ago |
 | granite3.1-moe | tools | 1b, 3b | 8 months ago |
 | granite3.3 | tools | 2b, 8b | 5 months ago |
 | gemma3n | N/A | e2b, e4b | 2 months ago |
+| phi4-reasoning | N/A | 14b | 4 months ago |
 | smollm | N/A | 135m, 360m, 1.7b | 1 year ago |
 | codestral | N/A | 22b | 1 year ago |
-| phi4-reasoning | N/A | 14b | 4 months ago |
 | dolphin-llama3 | N/A | 8b, 70b | 1 year ago |
+| mistral-small3.2 | vision, tools | 24b | 3 months ago |
 | wizardlm2 | N/A | 7b, 8x22b | 1 year ago |
-| mistral-small3.2 | vision, tools | 24b | 2 months ago |
 | cogito | tools | 3b, 8b, 14b, 32b, 70b | 5 months ago |
 | dolphin-mistral | N/A | 7b | 1 year ago |
 | magistral | tools, thinking | 24b | 3 months ago |
 | qwen3-coder | N/A | 30b, 480b | 1 month ago |
 | phi4-mini | tools | 3.8b | 6 months ago |
 | devstral | tools | 24b | 2 months ago |
-| command-r | tools | 35b | 1 year ago |
 | deepscaler | N/A | 1.5b | 7 months ago |
+| command-r | tools | 35b | 1 year ago |
 | dolphin-phi | N/A | 2.7b | 1 year ago |
 | hermes3 | tools | 3b, 8b, 70b, 405b | 9 months ago |
 | phi3.5 | N/A | 3.8b | 1 year ago |
@@ -80,7 +80,7 @@ This document lists the available models from Ollama along with their categories
 | deepcoder | N/A | 1.5b, 14b | 5 months ago |
 | zephyr | N/A | 7b, 141b | 1 year ago |
 | mistral-small3.1 | vision, tools | 24b | 5 months ago |
-| mistral-large | tools | 123b | 9 months ago |
+| mistral-large | tools | 123b | 10 months ago |
 | moondream | vision | 1.8b | 1 year ago |
 | wizard-vicuna-uncensored | N/A | 7b, 13b, 30b | 1 year ago |
 | granite-code | N/A | 3b, 8b, 20b, 34b | 1 year ago |
@@ -126,7 +126,7 @@ This document lists the available models from Ollama along with their categories
 | r1-1776 | N/A | 70b, 671b | 6 months ago |
 | dolphincoder | N/A | 7b, 15b | 1 year ago |
 | samantha-mistral | N/A | 7b | 1 year ago |
-| nemotron-mini | tools | 4b | 12 months ago |
+| nemotron-mini | tools | 4b | 1 year ago |
 | tulu3 | N/A | 8b, 70b | 9 months ago |
 | paraphrase-multilingual | embedding | 278m | 1 year ago |
 | starling-lm | N/A | 7b | 1 year ago |
@@ -154,8 +154,8 @@ This document lists the available models from Ollama along with their categories
 | reader-lm | N/A | 0.5b, 1.5b | 1 year ago |
 | llama-pro | N/A | N/A | 1 year ago |
 | yarn-mistral | N/A | 7b | 1 year ago |
-| shieldgemma | N/A | 2b, 9b, 27b | 11 months ago |
 | command-r7b | tools | 7b | 8 months ago |
+| shieldgemma | N/A | 2b, 9b, 27b | 11 months ago |
 | phi4-mini-reasoning | N/A | 3.8b | 4 months ago |
 | command-a | tools | 111b | 6 months ago |
 | mathstral | N/A | 7b | 1 year ago |
@@ -164,13 +164,13 @@ This document lists the available models from Ollama along with their categories
 | codeup | N/A | 13b | 1 year ago |
 | marco-o1 | N/A | 7b | 9 months ago |
 | stablelm-zephyr | N/A | 3b | 1 year ago |
-| solar-pro | N/A | 22b | 12 months ago |
+| solar-pro | N/A | 22b | 1 year ago |
 | duckdb-nsql | N/A | 7b | 1 year ago |
 | falcon2 | N/A | 11b | 1 year ago |
 | magicoder | N/A | 7b | 1 year ago |
 | mistrallite | N/A | 7b | 1 year ago |
 | codebooga | N/A | 34b | 1 year ago |
-| bespoke-minicheck | N/A | 7b | 12 months ago |
+| bespoke-minicheck | N/A | 7b | 1 year ago |
 | nuextract | N/A | 3.8b | 1 year ago |
 | wizard-vicuna | N/A | 13b | 1 year ago |
 | granite3-guardian | N/A | 2b, 8b | 10 months ago |
