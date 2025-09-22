@@ -4,12 +4,12 @@ This document lists the available models from Ollama along with their categories
 
 | Model Name | Category | Parameter Sizes | Last Updated |
 |------------------|-------------|-------------|----------------|
-| gpt-oss | tools, thinking | 20b, 120b | yesterday |
+| gpt-oss | tools, thinking | 20b, 120b | 2 days ago |
 | deepseek-r1 | tools, thinking | 1.5b, 7b, 8b, 14b, 32b, 70b, 671b | 2 months ago |
 | gemma3 | vision | 270m, 1b, 4b, 12b, 27b | 1 month ago |
 | embeddinggemma | embedding | 300m | 1 week ago |
 | qwen3 | tools, thinking | 0.6b, 1.7b, 4b, 8b, 14b, 30b, 32b, 235b | 1 month ago |
-| deepseek-v3.1 | tools, thinking | 671b | yesterday |
+| deepseek-v3.1 | tools, thinking | 671b | 2 days ago |
 | llama3.1 | tools | 8b, 70b, 405b | 9 months ago |
 | nomic-embed-text | embedding | N/A | 1 year ago |
 | llama3.2 | tools | 1b, 3b | 12 months ago |
@@ -31,7 +31,7 @@ This document lists the available models from Ollama along with their categories
 | tinyllama | N/A | 1.1b | 1 year ago |
 | dolphin3 | N/A | 8b | 8 months ago |
 | olmo2 | N/A | 7b, 13b | 8 months ago |
-| mistral-nemo | tools | 12b | 1 month ago |
+| mistral-nemo | tools | 12b | 2 months ago |
 | llama3.3 | tools | 70b | 9 months ago |
 | llama3.2-vision | vision | 11b, 90b | 4 months ago |
 | deepseek-v3 | N/A | 671b | 8 months ago |
@@ -48,8 +48,8 @@ This document lists the available models from Ollama along with their categories
 | deepseek-coder-v2 | N/A | 16b, 236b | 1 year ago |
 | codegemma | N/A | 2b, 7b | 1 year ago |
 | snowflake-arctic-embed | embedding | 22m, 33m, 110m, 137m, 335m | 1 year ago |
-| phi | N/A | 2.7b | 1 year ago |
 | orca-mini | N/A | 3b, 7b, 13b, 70b | 1 year ago |
+| phi | N/A | 2.7b | 1 year ago |
 | llama4 | vision, tools | 16x17b, 128x17b | 3 months ago |
 | qwen2.5vl | vision | 3b, 7b, 32b, 72b | 4 months ago |
 | dolphin-mixtral | N/A | 8x7b, 8x22b | 9 months ago |
@@ -58,15 +58,15 @@ This document lists the available models from Ollama along with their categories
 | granite3.1-moe | tools | 1b, 3b | 8 months ago |
 | granite3.3 | tools | 2b, 8b | 5 months ago |
 | gemma3n | N/A | e2b, e4b | 2 months ago |
-| phi4-reasoning | N/A | 14b | 4 months ago |
 | mistral-small3.2 | vision, tools | 24b | 3 months ago |
-| smollm | N/A | 135m, 360m, 1.7b | 1 year ago |
+| phi4-reasoning | N/A | 14b | 4 months ago |
 | codestral | N/A | 22b | 1 year ago |
+| smollm | N/A | 135m, 360m, 1.7b | 1 year ago |
 | dolphin-llama3 | N/A | 8b, 70b | 1 year ago |
 | cogito | tools | 3b, 8b, 14b, 32b, 70b | 5 months ago |
 | wizardlm2 | N/A | 7b, 8x22b | 1 year ago |
+| qwen3-coder | N/A | 30b, 480b | 2 hours ago |
 | dolphin-mistral | N/A | 7b | 1 year ago |
-| qwen3-coder | N/A | 30b, 480b | 11 hours ago |
 | magistral | tools, thinking | 24b | 3 months ago |
 | phi4-mini | tools | 3.8b | 6 months ago |
 | deepscaler | N/A | 1.5b | 7 months ago |
@@ -104,8 +104,8 @@ This document lists the available models from Ollama along with their categories
 | glm4 | N/A | 9b | 1 year ago |
 | granite3.2 | tools | 2b, 8b | 6 months ago |
 | stable-code | N/A | 3b | 1 year ago |
-| nous-hermes2 | N/A | 10.7b, 34b | 1 year ago |
 | opencoder | N/A | 1.5b, 8b | 10 months ago |
+| nous-hermes2 | N/A | 10.7b, 34b | 1 year ago |
 | neural-chat | N/A | 7b | 1 year ago |
 | wizardcoder | N/A | 33b | 1 year ago |
 | command-r-plus | tools | 104b | 1 year ago |
@@ -114,8 +114,8 @@ This document lists the available models from Ollama along with their categories
 | stablelm2 | N/A | 1.6b, 12b | 1 year ago |
 | sqlcoder | N/A | 7b, 15b | 1 year ago |
 | llama3-chatqa | N/A | 8b, 70b | 1 year ago |
-| llava-phi3 | vision | 3.8b | 1 year ago |
 | yi-coder | N/A | 1.5b, 9b | 1 year ago |
+| llava-phi3 | vision | 3.8b | 1 year ago |
 | granite3.1-dense | tools | 2b, 8b | 8 months ago |
 | granite3-dense | tools | 2b, 8b | 10 months ago |
 | wizard-math | N/A | 7b, 13b, 70b | 1 year ago |
@@ -154,8 +154,8 @@ This document lists the available models from Ollama along with their categories
 | reader-lm | N/A | 0.5b, 1.5b | 1 year ago |
 | llama-pro | N/A | N/A | 1 year ago |
 | yarn-mistral | N/A | 7b | 1 year ago |
-| command-r7b | tools | 7b | 8 months ago |
 | phi4-mini-reasoning | N/A | 3.8b | 4 months ago |
+| command-r7b | tools | 7b | 8 months ago |
 | shieldgemma | N/A | 2b, 9b, 27b | 11 months ago |
 | command-a | tools | 111b | 6 months ago |
 | mathstral | N/A | 7b | 1 year ago |
