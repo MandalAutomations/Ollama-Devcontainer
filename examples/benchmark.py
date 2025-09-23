@@ -10,14 +10,18 @@ EMBEDDING_MODEL = "embeddinggemma:latest" # Find available models here https://o
 
 models = [
     # "llama3.2:1b",
-    # "gemma3:270m"
+    # "gemma3:270m",
+    # "tinyllama:latest",
 ]
 
 embedding_models = [
-    "embeddinggemma:latest",
-    "nomic-embed-text:latest",
+    "nomic-embed-text:v1.5",
+    "nomic-embed-text:137m-v1.5-fp16",
+    "granite-embedding:30m",
+    "granite-embedding:278m",
     "snowflake-arctic-embed:22m",
-    "mxbai-embed-large:latest"
+    "mxbai-embed-large:latest",
+    "tinyllama:latest"
 ]
 
 # Example prompts for benchmarking
@@ -26,7 +30,17 @@ prompts = [
     "Explain the theory of relativity.",
     "Summarize the plot of Hamlet.",
     "Translate 'hello' to Spanish.",
-    "List three uses for a paperclip."
+    "List three uses for a paperclip.",
+    "Describe the process of photosynthesis.",
+    "Who wrote 'Pride and Prejudice'?",
+    "What is the boiling point of water in Celsius?",
+    "Write a haiku about the ocean.",
+    "What are the main causes of climate change?",
+    "Convert 100 USD to euros.",
+    "Name the largest planet in our solar system.",
+    "What is the Pythagorean theorem?",
+    "Give a brief history of the Internet.",
+    "What is the chemical symbol for gold?"
 ]
 
 def print_to_csv(data, filename="data/benchmark_results.csv"):
@@ -63,7 +77,6 @@ def benchmark_embedding(llama_client, prompts):
 if __name__ == "__main__":
 
     llama_client = llama(OLLAMA_HOST)
-    llama_client.remove_all_models()
     print_to_csv("Model,avg_response_time(s),Dimensions")
 
     for model in models:

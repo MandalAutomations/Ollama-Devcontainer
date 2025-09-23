@@ -8,10 +8,7 @@ EMBEDDING_MODEL = "granite-embedding:30m" # Find available models here https://o
 
 if __name__ == "__main__":
     llama = llama(OLLAMA_HOST)
-    llama.remove_model("tinyllama:1.1b")
-    print(llama.get_all_models())
+    all_models = llama.get_all_models()
     
-    
-    # llama.remove_all_models()
-    
-    # print(llama.get_all_models())
+    for model in all_models:
+        print(model)
