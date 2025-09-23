@@ -9,7 +9,7 @@
     "postCreateCommand": "",
     "customizations": {
         "codespaces": {
-        "openFiles": []
+        "openFiles": ["main.ipynb"]
         },
         "vscode": {
         "extensions": [
