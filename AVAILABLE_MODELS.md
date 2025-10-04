@@ -4,12 +4,12 @@ This document lists the available models from Ollama along with their categories
 
 | Model Name | Category | Parameter Sizes | Last Updated |
 |------------------|-------------|-------------|----------------|
-| gpt-oss | tools, thinking | 20b, 120b | 1 week ago |
+| gpt-oss | tools, thinking | 20b, 120b | 2 weeks ago |
 | deepseek-r1 | tools, thinking | 1.5b, 7b, 8b, 14b, 32b, 70b, 671b | 3 months ago |
 | gemma3 | vision | 270m, 1b, 4b, 12b, 27b | 1 month ago |
 | embeddinggemma | embedding | 300m | 3 weeks ago |
-| qwen3 | tools, thinking | 0.6b, 1.7b, 4b, 8b, 14b, 30b, 32b, 235b | yesterday |
-| deepseek-v3.1 | tools, thinking | 671b | 6 days ago |
+| qwen3 | tools, thinking | 0.6b, 1.7b, 4b, 8b, 14b, 30b, 32b, 235b | 2 days ago |
+| deepseek-v3.1 | tools, thinking | 671b | 1 week ago |
 | llama3.1 | tools | 8b, 70b, 405b | 10 months ago |
 | nomic-embed-text | embedding | N/A | 1 year ago |
 | llama3.2 | tools | 1b, 3b | 1 year ago |
@@ -99,8 +99,8 @@ This document lists the available models from Ollama along with their categories
 | qwen2-math | N/A | 1.5b, 7b, 72b | 1 year ago |
 | snowflake-arctic-embed2 | embedding | 568m | 10 months ago |
 | llama2-chinese | N/A | 7b, 13b | 1 year ago |
-| aya | N/A | 8b, 35b | 1 year ago |
 | opencoder | N/A | 1.5b, 8b | 10 months ago |
+| aya | N/A | 8b, 35b | 1 year ago |
 | tinydolphin | N/A | 1.1b | 1 year ago |
 | glm4 | N/A | 9b | 1 year ago |
 | granite3.2 | tools | 2b, 8b | 7 months ago |
@@ -145,8 +145,8 @@ This document lists the available models from Ollama along with their categories
 | aya-expanse | tools | 8b, 32b | 11 months ago |
 | llama-guard3 | N/A | 1b, 8b | 11 months ago |
 | smallthinker | N/A | 3b | 9 months ago |
-| wizardlm | N/A | N/A | 1 year ago |
 | orca2 | N/A | 7b, 13b | 1 year ago |
+| wizardlm | N/A | N/A | 1 year ago |
 | medllama2 | N/A | 7b | 1 year ago |
 | nous-hermes2-mixtral | N/A | 8x7b | 9 months ago |
 | stable-beluga | N/A | 7b, 13b, 70b | 1 year ago |
@@ -184,5 +184,5 @@ This document lists the available models from Ollama along with their categories
 | alfred | N/A | 40b | 1 year ago |
 | command-r7b-arabic | tools | 7b | 7 months ago |
 | qwen3-embedding | embedding | 0.6b, 4b, 8b | 1 week ago |
+| granite4 | tools | N/A | yesterday |
 | kimi-k2 | N/A | N/A | 1 week ago |
-| granite4 | tools | N/A | 14 hours ago |
