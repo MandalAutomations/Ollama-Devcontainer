@@ -80,14 +80,14 @@ This document lists the available models from Ollama along with their categories
 | mistral-small3.1 | vision, tools | 24b | 6 months ago |
 | yi | N/A | 6b, 9b, 34b | 1 year ago |
 | zephyr | N/A | 7b, 141b | 1 year ago |
-| granite-code | N/A | 3b, 8b, 20b, 34b | 1 year ago |
 | moondream | vision | 1.8b | 1 year ago |
+| granite-code | N/A | 3b, 8b, 20b, 34b | 1 year ago |
 | mistral-large | tools | 123b | 10 months ago |
 | wizard-vicuna-uncensored | N/A | 7b, 13b, 30b | 1 year ago |
 | starcoder | N/A | 1b, 3b, 7b, 15b | 1 year ago |
 | deepseek-llm | N/A | 7b, 67b | 1 year ago |
 | nous-hermes | N/A | 7b, 13b | 1 year ago |
-| exaone-deep | N/A | 2.4b, 7.8b, 32b | 6 months ago |
+| exaone-deep | N/A | 2.4b, 7.8b, 32b | 7 months ago |
 | vicuna | N/A | 7b, 13b, 33b | 1 year ago |
 | openchat | N/A | 7b | 1 year ago |
 | falcon | N/A | 7b, 40b, 180b | 1 year ago |
@@ -159,9 +159,9 @@ This document lists the available models from Ollama along with their categories
 | yarn-mistral | N/A | 7b | 1 year ago |
 | command-a | tools | 111b | 7 months ago |
 | mathstral | N/A | 7b | 1 year ago |
+| qwen3-embedding | embedding | 0.6b, 4b, 8b | 3 weeks ago |
 | nexusraven | N/A | 13b | 1 year ago |
 | everythinglm | N/A | 13b | 1 year ago |
-| qwen3-embedding | embedding | 0.6b, 4b, 8b | 3 weeks ago |
 | codeup | N/A | 13b | 1 year ago |
 | marco-o1 | N/A | 7b | 10 months ago |
 | stablelm-zephyr | N/A | 3b | 1 year ago |
@@ -186,4 +186,4 @@ This document lists the available models from Ollama along with their categories
 | alfred | N/A | 40b | 1 year ago |
 | command-r7b-arabic | tools | 7b | 7 months ago |
 | kimi-k2 | N/A | N/A | 2 weeks ago |
-| qwen3-vl | N/A | N/A | 12 hours ago |
+| qwen3-vl | N/A | N/A | 20 hours ago |
