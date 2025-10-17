@@ -4,11 +4,14 @@ This document lists the available models from Ollama along with their categories
 
 | Model Name | Category | Parameter Sizes | Last Updated |
 |------------------|-------------|-------------|----------------|
-| gpt-oss | tools, thinking | 20b, 120b | 6 days ago |
+| gpt-oss | tools, thinking | 20b, 120b | 1 week ago |
+| qwen3-vl | vision | N/A | 2 days ago |
 | deepseek-r1 | tools, thinking | 1.5b, 7b, 8b, 14b, 32b, 70b, 671b | 3 months ago |
+| qwen3-coder | tools | 30b, 480b | 3 weeks ago |
 | gemma3 | vision | 270m, 1b, 4b, 12b, 27b | 2 months ago |
+| glm-4.6 | N/A | N/A | 2 days ago |
 | embeddinggemma | embedding | 300m | 1 month ago |
-| qwen3 | tools, thinking | 0.6b, 1.7b, 4b, 8b, 14b, 30b, 32b, 235b | 5 days ago |
+| qwen3 | tools, thinking | 0.6b, 1.7b, 4b, 8b, 14b, 30b, 32b, 235b | 6 days ago |
 | deepseek-v3.1 | tools, thinking | 671b | 2 weeks ago |
 | llama3.1 | tools | 8b, 70b, 405b | 10 months ago |
 | nomic-embed-text | embedding | N/A | 1 year ago |
@@ -64,7 +67,6 @@ This document lists the available models from Ollama along with their categories
 | magistral | tools, thinking | 24b | 4 months ago |
 | deepscaler | N/A | 1.5b | 8 months ago |
 | dolphin-phi | N/A | 2.7b | 1 year ago |
-| qwen3-coder | tools | 30b, 480b | 3 weeks ago |
 | dolphin-llama3 | N/A | 8b, 70b | 1 year ago |
 | codestral | N/A | 22b | 1 year ago |
 | smollm | N/A | 135m, 360m, 1.7b | 1 year ago |
@@ -85,9 +87,9 @@ This document lists the available models from Ollama along with their categories
 | mistral-large | tools | 123b | 10 months ago |
 | wizard-vicuna-uncensored | N/A | 7b, 13b, 30b | 1 year ago |
 | starcoder | N/A | 1b, 3b, 7b, 15b | 1 year ago |
-| deepseek-llm | N/A | 7b, 67b | 1 year ago |
-| nous-hermes | N/A | 7b, 13b | 1 year ago |
 | exaone-deep | N/A | 2.4b, 7.8b, 32b | 7 months ago |
+| nous-hermes | N/A | 7b, 13b | 1 year ago |
+| deepseek-llm | N/A | 7b, 67b | 1 year ago |
 | vicuna | N/A | 7b, 13b, 33b | 1 year ago |
 | openchat | N/A | 7b | 1 year ago |
 | falcon | N/A | 7b, 40b, 180b | 1 year ago |
@@ -121,14 +123,14 @@ This document lists the available models from Ollama along with their categories
 | wizard-math | N/A | 7b, 13b, 70b | 1 year ago |
 | exaone3.5 | N/A | 2.4b, 7.8b, 32b | 10 months ago |
 | reflection | N/A | 70b | 1 year ago |
-| llama3-gradient | N/A | 8b, 70b | 1 year ago |
 | r1-1776 | N/A | 70b, 671b | 7 months ago |
-| dbrx | N/A | 132b | 1 year ago |
+| llama3-gradient | N/A | 8b, 70b | 1 year ago |
 | paraphrase-multilingual | embedding | 278m | 1 year ago |
+| dbrx | N/A | 132b | 1 year ago |
 | dolphincoder | N/A | 7b, 15b | 1 year ago |
 | samantha-mistral | N/A | 7b | 2 years ago |
 | nemotron-mini | tools | 4b | 1 year ago |
-| tulu3 | N/A | 8b, 70b | 9 months ago |
+| tulu3 | N/A | 8b, 70b | 10 months ago |
 | granite-embedding | embedding | 30m, 278m | 10 months ago |
 | starling-lm | N/A | 7b | 1 year ago |
 | phind-codellama | N/A | 34b | 1 year ago |
@@ -137,7 +139,7 @@ This document lists the available models from Ollama along with their categories
 | xwinlm | N/A | 7b, 13b | 1 year ago |
 | athene-v2 | tools | 72b | 11 months ago |
 | llama3-groq-tool-use | tools | 8b, 70b | 1 year ago |
-| nemotron | tools | 70b | 12 months ago |
+| nemotron | tools | 70b | 1 year ago |
 | yarn-llama2 | N/A | 7b, 13b | 1 year ago |
 | meditron | N/A | 7b, 70b | 1 year ago |
 | granite3-moe | tools | 1b, 3b | 11 months ago |
@@ -154,9 +156,9 @@ This document lists the available models from Ollama along with their categories
 | reader-lm | N/A | 0.5b, 1.5b | 1 year ago |
 | command-r7b | tools | 7b | 9 months ago |
 | phi4-mini-reasoning | N/A | 3.8b | 5 months ago |
+| qwen3-embedding | embedding | 0.6b, 4b, 8b | 3 weeks ago |
 | llama-pro | N/A | N/A | 1 year ago |
 | shieldgemma | N/A | 2b, 9b, 27b | 1 year ago |
-| qwen3-embedding | embedding | 0.6b, 4b, 8b | 3 weeks ago |
 | yarn-mistral | N/A | 7b | 1 year ago |
 | command-a | tools | 111b | 7 months ago |
 | mathstral | N/A | 7b | 1 year ago |
@@ -179,12 +181,10 @@ This document lists the available models from Ollama along with their categories
 | notux | N/A | 8x7b | 1 year ago |
 | open-orca-platypus2 | N/A | 13b | 1 year ago |
 | notus | N/A | 7b | 1 year ago |
+| granite4 | tools | N/A | 2 weeks ago |
 | sailor2 | N/A | 1b, 8b, 20b | 10 months ago |
 | firefunction-v2 | tools | 70b | 1 year ago |
 | goliath | N/A | N/A | 1 year ago |
-| granite4 | tools | N/A | 1 week ago |
 | alfred | N/A | 40b | 1 year ago |
 | command-r7b-arabic | tools | 7b | 7 months ago |
-| kimi-k2 | N/A | N/A | 2 weeks ago |
-| qwen3-vl | vision | N/A | yesterday |
-| glm-4.6 | N/A | N/A | yesterday |
+| kimi-k2 | N/A | N/A | 3 weeks ago |
