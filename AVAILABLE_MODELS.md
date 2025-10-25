@@ -11,8 +11,8 @@ This document lists the available models from Ollama along with their categories
 | gemma3 | vision | 270m, 1b, 4b, 12b, 27b | 2 months ago |
 | glm-4.6 | N/A | N/A | 1 week ago |
 | embeddinggemma | embedding | 300m | 1 month ago |
-| qwen3 | tools, thinking | 0.6b, 1.7b, 4b, 8b, 14b, 30b, 32b, 235b | 1 week ago |
-| deepseek-v3.1 | tools, thinking | 671b | 3 weeks ago |
+| qwen3 | tools, thinking | 0.6b, 1.7b, 4b, 8b, 14b, 30b, 32b, 235b | 2 weeks ago |
+| deepseek-v3.1 | tools, thinking | 671b | 4 weeks ago |
 | llama3.1 | tools | 8b, 70b, 405b | 10 months ago |
 | nomic-embed-text | embedding | N/A | 1 year ago |
 | llama3.2 | tools | 1b, 3b | 1 year ago |
@@ -22,7 +22,7 @@ This document lists the available models from Ollama along with their categories
 | llama3 | N/A | 8b, 70b | 1 year ago |
 | llava | vision | 7b, 13b, 34b | 1 year ago |
 | gemma2 | N/A | 2b, 9b, 27b | 1 year ago |
-| qwen2.5-coder | tools | 0.5b, 1.5b, 3b, 7b, 14b, 32b | 4 months ago |
+| qwen2.5-coder | tools | 0.5b, 1.5b, 3b, 7b, 14b, 32b | 5 months ago |
 | phi4 | N/A | 14b | 9 months ago |
 | gemma | N/A | 2b, 7b | 1 year ago |
 | mxbai-embed-large | embedding | 335m | 1 year ago |
@@ -60,10 +60,10 @@ This document lists the available models from Ollama along with their categories
 | dolphin-mixtral | N/A | 8x7b, 8x22b | 10 months ago |
 | mistral-small3.2 | vision, tools | 24b | 4 months ago |
 | granite3.3 | tools | 2b, 8b | 6 months ago |
-| gemma3n | N/A | e2b, e4b | 3 months ago |
+| gemma3n | N/A | e2b, e4b | 4 months ago |
 | cogito | tools | 3b, 8b, 14b, 32b, 70b | 6 months ago |
-| openthinker | N/A | 7b, 32b | 6 months ago |
 | phi4-reasoning | N/A | 14b | 5 months ago |
+| openthinker | N/A | 7b, 32b | 6 months ago |
 | magistral | tools, thinking | 24b | 4 months ago |
 | deepscaler | N/A | 1.5b | 8 months ago |
 | dolphin-phi | N/A | 2.7b | 1 year ago |
@@ -90,14 +90,14 @@ This document lists the available models from Ollama along with their categories
 | exaone-deep | N/A | 2.4b, 7.8b, 32b | 7 months ago |
 | nous-hermes | N/A | 7b, 13b | 1 year ago |
 | deepseek-llm | N/A | 7b, 67b | 1 year ago |
-| falcon | N/A | 7b, 40b, 180b | 1 year ago |
+| falcon | N/A | 7b, 40b, 180b | 2 years ago |
 | vicuna | N/A | 7b, 13b, 33b | 1 year ago |
 | openchat | N/A | 7b | 1 year ago |
 | deepseek-v2 | N/A | 16b, 236b | 1 year ago |
 | mistral-openorca | N/A | 7b | 2 years ago |
+| opencoder | N/A | 1.5b, 8b | 11 months ago |
 | codegeex4 | N/A | 9b | 1 year ago |
 | openhermes | N/A | N/A | 1 year ago |
-| opencoder | N/A | 1.5b, 8b | 11 months ago |
 | codeqwen | N/A | 7b | 1 year ago |
 | snowflake-arctic-embed2 | embedding | 568m | 10 months ago |
 | qwen2-math | N/A | 1.5b, 7b, 72b | 1 year ago |
@@ -121,8 +121,8 @@ This document lists the available models from Ollama along with their categories
 | granite3-dense | tools | 2b, 8b | 11 months ago |
 | granite3.1-dense | tools | 2b, 8b | 9 months ago |
 | wizard-math | N/A | 7b, 13b, 70b | 1 year ago |
-| exaone3.5 | N/A | 2.4b, 7.8b, 32b | 10 months ago |
 | r1-1776 | N/A | 70b, 671b | 8 months ago |
+| exaone3.5 | N/A | 2.4b, 7.8b, 32b | 10 months ago |
 | reflection | N/A | 70b | 1 year ago |
 | llama3-gradient | N/A | 8b, 70b | 1 year ago |
 | paraphrase-multilingual | embedding | 278m | 1 year ago |
@@ -146,7 +146,7 @@ This document lists the available models from Ollama along with their categories
 | llama-guard3 | N/A | 1b, 8b | 1 year ago |
 | granite3-moe | tools | 1b, 3b | 11 months ago |
 | wizardlm-uncensored | N/A | 13b | 1 year ago |
-| aya-expanse | tools | 8b, 32b | 12 months ago |
+| aya-expanse | tools | 8b, 32b | 1 year ago |
 | smallthinker | N/A | 3b | 9 months ago |
 | orca2 | N/A | 7b, 13b | 1 year ago |
 | wizardlm | N/A | N/A | 1 year ago |
@@ -162,12 +162,12 @@ This document lists the available models from Ollama along with their categories
 | command-a | tools | 111b | 7 months ago |
 | yarn-mistral | N/A | 7b | 1 year ago |
 | mathstral | N/A | 7b | 1 year ago |
-| nexusraven | N/A | 13b | 1 year ago |
 | everythinglm | N/A | 13b | 1 year ago |
+| nexusraven | N/A | 13b | 1 year ago |
+| granite4 | tools | N/A | 3 weeks ago |
 | codeup | N/A | 13b | 1 year ago |
 | marco-o1 | N/A | 7b | 10 months ago |
 | stablelm-zephyr | N/A | 3b | 1 year ago |
-| granite4 | tools | N/A | 3 weeks ago |
 | solar-pro | N/A | 22b | 1 year ago |
 | falcon2 | N/A | 11b | 1 year ago |
 | duckdb-nsql | N/A | 7b | 1 year ago |
