@@ -57,8 +57,8 @@ This document lists the available models from Ollama along with their categories
 | snowflake-arctic-embed | embedding | 22m, 33m, 110m, 137m, 335m | 1 year ago |
 | llama4 | vision, tools | 16x17b, 128x17b | 4 months ago |
 | mistral-small3.2 | vision, tools | 24b | 4 months ago |
-| phi | N/A | 2.7b | 1 year ago |
 | gemma3n | N/A | e2b, e4b | 4 months ago |
+| phi | N/A | 2.7b | 1 year ago |
 | dolphin-mixtral | N/A | 8x7b, 8x22b | 10 months ago |
 | cogito | tools | 3b, 8b, 14b, 32b, 70b | 7 months ago |
 | granite3.3 | tools | 2b, 8b | 6 months ago |
@@ -69,18 +69,18 @@ This document lists the available models from Ollama along with their categories
 | openthinker | N/A | 7b, 32b | 7 months ago |
 | dolphin-llama3 | N/A | 8b, 70b | 1 year ago |
 | codestral | N/A | 22b | 1 year ago |
-| smollm | N/A | 135m, 360m, 1.7b | 1 year ago |
 | phi4-mini | tools | 3.8b | 8 months ago |
+| smollm | N/A | 135m, 360m, 1.7b | 1 year ago |
 | wizardlm2 | N/A | 7b, 8x22b | 1 year ago |
-| devstral | tools | 24b | 4 months ago |
 | granite3.2-vision | vision, tools | 2b | 8 months ago |
+| devstral | tools | 24b | 4 months ago |
 | moondream | vision | 1.8b | 1 year ago |
 | dolphin-mistral | N/A | 7b | 1 year ago |
 | deepcoder | N/A | 1.5b, 14b | 7 months ago |
 | mistral-small3.1 | vision, tools | 24b | 7 months ago |
 | command-r | tools | 35b | 1 year ago |
 | phi3.5 | N/A | 3.8b | 1 year ago |
-| hermes3 | tools | 3b, 8b, 70b, 405b | 10 months ago |
+| hermes3 | tools | 3b, 8b, 70b, 405b | 11 months ago |
 | granite-code | N/A | 3b, 8b, 20b, 34b | 1 year ago |
 | yi | N/A | 6b, 9b, 34b | 1 year ago |
 | zephyr | N/A | 7b, 141b | 1 year ago |
@@ -114,10 +114,10 @@ This document lists the available models from Ollama along with their categories
 | command-r-plus | tools | 104b | 1 year ago |
 | sqlcoder | N/A | 7b, 15b | 1 year ago |
 | bge-large | embedding | 335m | 1 year ago |
+| granite4 | tools | 350m, 1b, 3b | 1 week ago |
 | stablelm2 | N/A | 1.6b, 12b | 1 year ago |
 | yi-coder | N/A | 1.5b, 9b | 1 year ago |
 | llama3-chatqa | N/A | 8b, 70b | 1 year ago |
-| granite4 | tools | 350m, 1b, 3b | 1 week ago |
 | llava-phi3 | vision | 3.8b | 1 year ago |
 | granite3-dense | tools | 2b, 8b | 11 months ago |
 | r1-1776 | N/A | 70b, 671b | 8 months ago |
@@ -128,10 +128,10 @@ This document lists the available models from Ollama along with their categories
 | llama3-gradient | N/A | 8b, 70b | 1 year ago |
 | dolphincoder | N/A | 7b, 15b | 1 year ago |
 | paraphrase-multilingual | embedding | 278m | 1 year ago |
+| qwen3-embedding | embedding | 0.6b, 4b, 8b | 1 month ago |
 | dbrx | N/A | 132b | 1 year ago |
 | granite-embedding | embedding | 30m, 278m | 10 months ago |
 | samantha-mistral | N/A | 7b | 2 years ago |
-| qwen3-embedding | embedding | 0.6b, 4b, 8b | 1 month ago |
 | nemotron-mini | tools | 4b | 1 year ago |
 | tulu3 | N/A | 8b, 70b | 10 months ago |
 | starling-lm | N/A | 7b | 1 year ago |
@@ -140,7 +140,7 @@ This document lists the available models from Ollama along with their categories
 | solar | N/A | 10.7b | 1 year ago |
 | xwinlm | N/A | 7b, 13b | 2 years ago |
 | llama3-groq-tool-use | tools | 8b, 70b | 1 year ago |
-| athene-v2 | tools | 72b | 11 months ago |
+| athene-v2 | tools | 72b | 12 months ago |
 | nemotron | tools | 70b | 1 year ago |
 | yarn-llama2 | N/A | 7b, 13b | 2 years ago |
 | meditron | N/A | 7b, 70b | 1 year ago |
@@ -171,8 +171,8 @@ This document lists the available models from Ollama along with their categories
 | solar-pro | N/A | 22b | 1 year ago |
 | falcon2 | N/A | 11b | 1 year ago |
 | duckdb-nsql | N/A | 7b | 1 year ago |
-| magicoder | N/A | 7b | 1 year ago |
 | mistrallite | N/A | 7b | 2 years ago |
+| magicoder | N/A | 7b | 1 year ago |
 | codebooga | N/A | 34b | 2 years ago |
 | bespoke-minicheck | N/A | 7b | 1 year ago |
 | nuextract | N/A | 3.8b | 1 year ago |
@@ -190,4 +190,4 @@ This document lists the available models from Ollama along with their categories
 | minimax-m2 | N/A | N/A | 1 week ago |
 | kimi-k2 | N/A | N/A | 1 month ago |
 | gpt-oss-safeguard | tools, thinking | 20b, 120b | 1 week ago |
-| kimi-k2-thinking | N/A | N/A | 3 days ago |
+| kimi-k2-thinking | N/A | N/A | 4 days ago |
