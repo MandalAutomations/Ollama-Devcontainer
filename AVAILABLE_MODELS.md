@@ -14,8 +14,8 @@ This document lists the available models from Ollama along with their categories
 | qwen3 | tools, thinking | 0.6b, 1.7b, 4b, 8b, 14b, 30b, 32b, 235b | 1 month ago |
 | deepseek-v3.1 | tools, thinking | 671b | 1 month ago |
 | llama3.1 | tools | 8b, 70b, 405b | 11 months ago |
-| nomic-embed-text | embedding | N/A | 1 year ago |
 | llama3.2 | tools | 1b, 3b | 1 year ago |
+| nomic-embed-text | embedding | N/A | 1 year ago |
 | mistral | tools | 7b | 4 months ago |
 | qwen2.5 | tools | 0.5b, 1.5b, 3b, 7b, 14b, 32b, 72b | 1 year ago |
 | phi3 | N/A | 3.8b, 14b | 1 year ago |
@@ -61,8 +61,8 @@ This document lists the available models from Ollama along with their categories
 | cogito | tools | 3b, 8b, 14b, 32b, 70b | 7 months ago |
 | phi | N/A | 2.7b | 1 year ago |
 | dolphin-mixtral | N/A | 8x7b, 8x22b | 11 months ago |
-| granite3.3 | tools | 2b, 8b | 7 months ago |
 | phi4-reasoning | N/A | 14b | 6 months ago |
+| granite3.3 | tools | 2b, 8b | 7 months ago |
 | magistral | tools, thinking | 24b | 5 months ago |
 | deepscaler | N/A | 1.5b | 9 months ago |
 | dolphin-phi | N/A | 2.7b | 1 year ago |
@@ -90,9 +90,9 @@ This document lists the available models from Ollama along with their categories
 | starcoder | N/A | 1b, 3b, 7b, 15b | 2 years ago |
 | nous-hermes | N/A | 7b, 13b | 2 years ago |
 | falcon | N/A | 7b, 40b, 180b | 2 years ago |
-| deepseek-llm | N/A | 7b, 67b | 1 year ago |
 | granite4 | tools | 350m, 1b, 3b | 2 weeks ago |
 | opencoder | N/A | 1.5b, 8b | 12 months ago |
+| deepseek-llm | N/A | 7b, 67b | 1 year ago |
 | vicuna | N/A | 7b, 13b, 33b | 2 years ago |
 | openchat | N/A | 7b | 1 year ago |
 | deepseek-v2 | N/A | 16b, 236b | 1 year ago |
@@ -134,10 +134,10 @@ This document lists the available models from Ollama along with their categories
 | samantha-mistral | N/A | 7b | 2 years ago |
 | nemotron-mini | tools | 4b | 1 year ago |
 | internlm2 | N/A | 1m, 1.8b, 7b, 20b | 1 year ago |
-| tulu3 | N/A | 8b, 70b | 10 months ago |
+| tulu3 | N/A | 8b, 70b | 11 months ago |
 | starling-lm | N/A | 7b | 1 year ago |
 | phind-codellama | N/A | 34b | 1 year ago |
-| athene-v2 | tools | 72b | 12 months ago |
+| athene-v2 | tools | 72b | 1 year ago |
 | solar | N/A | 10.7b | 1 year ago |
 | llama3-groq-tool-use | tools | 8b, 70b | 1 year ago |
 | xwinlm | N/A | 7b, 13b | 2 years ago |
@@ -151,8 +151,8 @@ This document lists the available models from Ollama along with their categories
 | smallthinker | N/A | 3b | 10 months ago |
 | orca2 | N/A | 7b, 13b | 1 year ago |
 | medllama2 | N/A | 7b | 2 years ago |
-| wizardlm | N/A | N/A | 2 years ago |
 | nous-hermes2-mixtral | N/A | 8x7b | 11 months ago |
+| wizardlm | N/A | N/A | 2 years ago |
 | command-r7b | tools | 7b | 10 months ago |
 | stable-beluga | N/A | 7b, 13b, 70b | 2 years ago |
 | phi4-mini-reasoning | N/A | 3.8b | 6 months ago |
@@ -173,8 +173,8 @@ This document lists the available models from Ollama along with their categories
 | duckdb-nsql | N/A | 7b | 1 year ago |
 | mistrallite | N/A | 7b | 2 years ago |
 | magicoder | N/A | 7b | 1 year ago |
-| codebooga | N/A | 34b | 2 years ago |
 | bespoke-minicheck | N/A | 7b | 1 year ago |
+| codebooga | N/A | 34b | 2 years ago |
 | nuextract | N/A | 3.8b | 1 year ago |
 | wizard-vicuna | N/A | 13b | 2 years ago |
 | granite3-guardian | N/A | 2b, 8b | 12 months ago |
