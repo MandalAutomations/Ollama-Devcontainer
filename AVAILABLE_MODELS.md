@@ -50,8 +50,8 @@ This document lists the available models from Ollama along with their categories
 | codegemma | N/A | 2b, 7b | 1 year ago |
 | llama2-uncensored | N/A | 7b, 70b | 2 years ago |
 | falcon3 | N/A | 1b, 3b, 7b, 10b | 11 months ago |
-| deepseek-coder-v2 | N/A | 16b, 236b | 1 year ago |
 | granite3.1-moe | tools | 1b, 3b | 10 months ago |
+| deepseek-coder-v2 | N/A | 16b, 236b | 1 year ago |
 | orca-mini | N/A | 3b, 7b, 13b, 70b | 2 years ago |
 | qwen2.5vl | vision | 3b, 7b, 32b, 72b | 5 months ago |
 | snowflake-arctic-embed | embedding | 22m, 33m, 110m, 137m, 335m | 1 year ago |
@@ -71,8 +71,8 @@ This document lists the available models from Ollama along with their categories
 | dolphin-llama3 | N/A | 8b, 70b | 1 year ago |
 | codestral | N/A | 22b | 1 year ago |
 | smollm | N/A | 135m, 360m, 1.7b | 1 year ago |
-| wizardlm2 | N/A | 7b, 8x22b | 1 year ago |
 | granite3.2-vision | vision, tools | 2b | 8 months ago |
+| wizardlm2 | N/A | 7b, 8x22b | 1 year ago |
 | devstral | tools | 24b | 4 months ago |
 | moondream | vision | 1.8b | 1 year ago |
 | dolphin-mistral | N/A | 7b | 1 year ago |
@@ -96,8 +96,8 @@ This document lists the available models from Ollama along with their categories
 | vicuna | N/A | 7b, 13b, 33b | 2 years ago |
 | openchat | N/A | 7b | 1 year ago |
 | deepseek-v2 | N/A | 16b, 236b | 1 year ago |
-| mistral-openorca | N/A | 7b | 2 years ago |
 | codegeex4 | N/A | 9b | 1 year ago |
+| mistral-openorca | N/A | 7b | 2 years ago |
 | openhermes | N/A | N/A | 1 year ago |
 | codeqwen | N/A | 7b | 1 year ago |
 | snowflake-arctic-embed2 | embedding | 568m | 11 months ago |
@@ -125,8 +125,8 @@ This document lists the available models from Ollama along with their categories
 | exaone3.5 | N/A | 2.4b, 7.8b, 32b | 11 months ago |
 | wizard-math | N/A | 7b, 13b, 70b | 1 year ago |
 | reflection | N/A | 70b | 1 year ago |
-| llama3-gradient | N/A | 8b, 70b | 1 year ago |
 | qwen3-embedding | embedding | 0.6b, 4b, 8b | 1 month ago |
+| llama3-gradient | N/A | 8b, 70b | 1 year ago |
 | dolphincoder | N/A | 7b, 15b | 1 year ago |
 | paraphrase-multilingual | embedding | 278m | 1 year ago |
 | granite-embedding | embedding | 30m, 278m | 11 months ago |
@@ -173,8 +173,8 @@ This document lists the available models from Ollama along with their categories
 | duckdb-nsql | N/A | 7b | 1 year ago |
 | mistrallite | N/A | 7b | 2 years ago |
 | magicoder | N/A | 7b | 1 year ago |
-| bespoke-minicheck | N/A | 7b | 1 year ago |
 | codebooga | N/A | 34b | 2 years ago |
+| bespoke-minicheck | N/A | 7b | 1 year ago |
 | nuextract | N/A | 3.8b | 1 year ago |
 | wizard-vicuna | N/A | 13b | 2 years ago |
 | granite3-guardian | N/A | 2b, 8b | 12 months ago |
@@ -184,7 +184,7 @@ This document lists the available models from Ollama along with their categories
 | open-orca-platypus2 | N/A | 13b | 2 years ago |
 | notus | N/A | 7b | 1 year ago |
 | sailor2 | N/A | 1b, 8b, 20b | 11 months ago |
-| goliath | N/A | N/A | 1 year ago |
+| goliath | N/A | N/A | 2 years ago |
 | alfred | N/A | 40b | 1 year ago |
 | command-r7b-arabic | tools | 7b | 8 months ago |
 | minimax-m2 | N/A | N/A | 2 weeks ago |
