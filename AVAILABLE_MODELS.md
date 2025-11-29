@@ -5,8 +5,8 @@ This document lists the available models from Ollama along with their categories
 | Model Name | Category | Parameter Sizes | Last Updated |
 |------------------|-------------|-------------|----------------|
 | gpt-oss | tools, thinking | 20b, 120b | 1 month ago |
-| qwen3-vl | vision, tools | 2b, 4b, 8b, 30b, 32b, 235b | 4 weeks ago |
-| deepseek-r1 | tools, thinking | 1.5b, 7b, 8b, 14b, 32b, 70b, 671b | 4 months ago |
+| qwen3-vl | vision, tools | 2b, 4b, 8b, 30b, 32b, 235b | 1 month ago |
+| deepseek-r1 | tools, thinking | 1.5b, 7b, 8b, 14b, 32b, 70b, 671b | 5 months ago |
 | qwen3-coder | tools | 30b, 480b | 2 months ago |
 | gemma3 | vision | 270m, 1b, 4b, 12b, 27b | 3 months ago |
 | glm-4.6 | N/A | N/A | 1 month ago |
@@ -63,9 +63,9 @@ This document lists the available models from Ollama along with their categories
 | phi | N/A | 2.7b | 1 year ago |
 | dolphin-mixtral | N/A | 8x7b, 8x22b | 11 months ago |
 | magistral | tools, thinking | 24b | 5 months ago |
-| granite3.3 | tools | 2b, 8b | 7 months ago |
 | deepscaler | N/A | 1.5b | 9 months ago |
 | dolphin-phi | N/A | 2.7b | 1 year ago |
+| granite3.3 | tools | 2b, 8b | 7 months ago |
 | openthinker | N/A | 7b, 32b | 7 months ago |
 | phi4-mini | tools | 3.8b | 9 months ago |
 | dolphin-llama3 | N/A | 8b, 70b | 1 year ago |
@@ -87,7 +87,7 @@ This document lists the available models from Ollama along with their categories
 | mistral-large | tools | 123b | 1 year ago |
 | exaone-deep | N/A | 2.4b, 7.8b, 32b | 8 months ago |
 | wizard-vicuna-uncensored | N/A | 7b, 13b, 30b | 2 years ago |
-| granite4 | tools | 350m, 1b, 3b | 4 weeks ago |
+| granite4 | tools | 350m, 1b, 3b | 1 month ago |
 | starcoder | N/A | 1b, 3b, 7b, 15b | 2 years ago |
 | opencoder | N/A | 1.5b, 8b | 1 year ago |
 | nous-hermes | N/A | 7b, 13b | 2 years ago |
@@ -124,8 +124,8 @@ This document lists the available models from Ollama along with their categories
 | granite3-dense | tools | 2b, 8b | 1 year ago |
 | granite3.1-dense | tools | 2b, 8b | 10 months ago |
 | exaone3.5 | N/A | 2.4b, 7.8b, 32b | 11 months ago |
-| wizard-math | N/A | 7b, 13b, 70b | 1 year ago |
 | reflection | N/A | 70b | 1 year ago |
+| wizard-math | N/A | 7b, 13b, 70b | 1 year ago |
 | llama3-gradient | N/A | 8b, 70b | 1 year ago |
 | granite-embedding | embedding | 30m, 278m | 11 months ago |
 | dolphincoder | N/A | 7b, 15b | 1 year ago |
@@ -138,8 +138,8 @@ This document lists the available models from Ollama along with their categories
 | starling-lm | N/A | 7b | 1 year ago |
 | phind-codellama | N/A | 34b | 1 year ago |
 | athene-v2 | tools | 72b | 1 year ago |
-| solar | N/A | 10.7b | 1 year ago |
 | llama3-groq-tool-use | tools | 8b, 70b | 1 year ago |
+| solar | N/A | 10.7b | 1 year ago |
 | xwinlm | N/A | 7b, 13b | 2 years ago |
 | nemotron | tools | 70b | 1 year ago |
 | meditron | N/A | 7b, 70b | 1 year ago |
@@ -166,7 +166,7 @@ This document lists the available models from Ollama along with their categories
 | everythinglm | N/A | 13b | 1 year ago |
 | nexusraven | N/A | 13b | 1 year ago |
 | codeup | N/A | 13b | 2 years ago |
-| marco-o1 | N/A | 7b | 11 months ago |
+| marco-o1 | N/A | 7b | 12 months ago |
 | stablelm-zephyr | N/A | 3b | 1 year ago |
 | falcon2 | N/A | 11b | 1 year ago |
 | solar-pro | N/A | 22b | 1 year ago |
@@ -183,14 +183,14 @@ This document lists the available models from Ollama along with their categories
 | notux | N/A | 8x7b | 1 year ago |
 | open-orca-platypus2 | N/A | 13b | 2 years ago |
 | notus | N/A | 7b | 1 year ago |
-| sailor2 | N/A | 1b, 8b, 20b | 11 months ago |
+| sailor2 | N/A | 1b, 8b, 20b | 12 months ago |
 | goliath | N/A | N/A | 2 years ago |
 | alfred | N/A | 40b | 2 years ago |
-| command-r7b-arabic | tools | 7b | 9 months ago |
 | deepseek-ocr | vision | 3b | 1 week ago |
+| command-r7b-arabic | tools | 7b | 9 months ago |
 | minimax-m2 | N/A | N/A | 1 month ago |
 | gpt-oss-safeguard | tools, thinking | 20b, 120b | 1 month ago |
 | kimi-k2 | N/A | N/A | 2 months ago |
 | gemini-3-pro-preview | N/A | N/A | 1 week ago |
 | kimi-k2-thinking | N/A | N/A | 3 weeks ago |
-| cogito-2.1 | N/A | 671b | 6 days ago |
+| cogito-2.1 | N/A | 671b | 1 week ago |
