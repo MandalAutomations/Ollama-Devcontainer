@@ -41,9 +41,9 @@ This document lists the available models from Ollama along with their categories
 | llama3.3 | tools | 70b | 11 months ago |
 | mistral-small | tools | 22b, 24b | 10 months ago |
 | smollm2 | tools | 135m, 360m, 1.7b | 1 year ago |
+| deepseek-coder | N/A | 1.3b, 6.7b, 33b | 1 year ago |
 | llava-llama3 | vision | 8b | 1 year ago |
 | all-minilm | embedding | 22m, 33m | 1 year ago |
-| deepseek-coder | N/A | 1.3b, 6.7b, 33b | 1 year ago |
 | qwq | tools | 32b | 8 months ago |
 | starcoder2 | N/A | 3b, 7b, 15b | 1 year ago |
 | codegemma | N/A | 2b, 7b | 1 year ago |
@@ -61,8 +61,8 @@ This document lists the available models from Ollama along with their categories
 | mistral-small3.2 | vision, tools | 24b | 5 months ago |
 | phi4-reasoning | N/A | 14b | 7 months ago |
 | phi | N/A | 2.7b | 1 year ago |
-| dolphin-mixtral | N/A | 8x7b, 8x22b | 11 months ago |
 | magistral | tools, thinking | 24b | 5 months ago |
+| dolphin-mixtral | N/A | 8x7b, 8x22b | 11 months ago |
 | deepscaler | N/A | 1.5b | 9 months ago |
 | dolphin-phi | N/A | 2.7b | 1 year ago |
 | granite3.3 | tools | 2b, 8b | 7 months ago |
@@ -100,7 +100,7 @@ This document lists the available models from Ollama along with their categories
 | codegeex4 | N/A | 9b | 1 year ago |
 | mistral-openorca | N/A | 7b | 2 years ago |
 | codeqwen | N/A | 7b | 1 year ago |
-| snowflake-arctic-embed2 | embedding | 568m | 11 months ago |
+| snowflake-arctic-embed2 | embedding | 568m | 12 months ago |
 | qwen2-math | N/A | 1.5b, 7b, 72b | 1 year ago |
 | tinydolphin | N/A | 1.1b | 1 year ago |
 | aya | N/A | 8b, 35b | 1 year ago |
