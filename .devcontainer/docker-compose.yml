@@ -14,6 +14,22 @@ services:
             - "11434:11434"
         volumes:
             - ollama_data:/root/.ollama
+        devices:
+            # AMD GPU support (ROCm)
+            - /dev/kfd:/dev/kfd
+            - /dev/dri:/dev/dri
+        group_add:
+            # Video group for AMD GPU access
+            - video
+            - render
+        deploy:
+            resources:
+                reservations:
+                    devices:
+                        # NVIDIA GPU support
+                        - driver: nvidia
+                          count: all
+                          capabilities: [gpu]
             
 volumes:
   ollama_data:

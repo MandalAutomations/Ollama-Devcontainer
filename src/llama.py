@@ -33,6 +33,54 @@ class llama:
         except (KeyError, json.JSONDecodeError) as e:
             print(f"Error parsing Ollama response: {e}")
             return []
+    
+    def check_gpu_status(self):
+        """ Check if GPU is available and being used by Ollama """
+        try:
+            # First check if we can get a response from the model with a simple prompt
+            # The generate API will include GPU info in the response metadata
+            response = requests.post(
+                f"{self.host}/api/generate",
+                json={
+                    "model": self.model if self.model else "tinyllama:latest",
+                    "prompt": "Hi",
+                    "stream": False
+                },
+                timeout=60
+            )
+            
+            if response.status_code != 200:
+                print(f"Error checking GPU status: {response.status_code}")
+                return None
+            
+            data = response.json()
+            
+            # Check for GPU-related information in the response
+            # Ollama includes load_duration and other timing info
+            gpu_info = {
+                'load_duration': data.get('load_duration'),
+                'prompt_eval_count': data.get('prompt_eval_count'),
+                'prompt_eval_duration': data.get('prompt_eval_duration'),
+                'eval_count': data.get('eval_count'),
+                'eval_duration': data.get('eval_duration')
+            }
+            
+            # Calculate tokens per second if available
+            eval_count = gpu_info.get('eval_count')
+            eval_duration = gpu_info.get('eval_duration')
+            
+            if eval_count is not None and eval_duration is not None and eval_duration > 0:
+                tokens_per_second = eval_count / (eval_duration / 1e9)
+                gpu_info['tokens_per_second'] = round(tokens_per_second, 2)
+            
+            return gpu_info
+            
+        except requests.exceptions.RequestException as e:
+            print(f"Error checking GPU status: {e}")
+            return None
+        except (KeyError, json.JSONDecodeError) as e:
+            print(f"Error parsing response: {e}")
+            return None
         
     def check_and_pull_model(self, model=None):
         """ Check if a model is available in Ollama, if not pull it """
