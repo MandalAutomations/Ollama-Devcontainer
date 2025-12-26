@@ -160,7 +160,7 @@ Add any required packages to `requirements.txt` and they will be automatically i
 
 ### Using Different Models
 
-Change the model in the relevant example script (e.g., `examples/generate_response_example.py`) by modifying the model name. The template will automatically pull the model if it's not already available.
+Change the model in the relevant example script (e.g., `examples/text_generate_response.py`) by modifying the model name. The template will automatically pull the model if it's not already available.
 
 ## Running the Example
 
