@@ -43,12 +43,15 @@ if __name__ == "__main__":
                 print("\n⚠ Performance is moderate - GPU may or may not be active")
             else:
                 print("\n⚠ Performance suggests CPU-only inference")
-                print("  Check if NVIDIA Container Toolkit is installed and configured")
+                print("  Check GPU drivers and container toolkit:")
+                print("    - NVIDIA: Verify NVIDIA Container Toolkit is installed")
+                print("    - AMD: Verify ROCm drivers are installed and configured")
     else:
         print("\n✗ Failed to connect to Ollama or check GPU status")
         print("  Make sure the Ollama service is running")
     
     print("\n" + "=" * 60)
     print("\nTo verify GPU access at the system level, you can also run:")
-    print("  docker exec ollama nvidia-smi")
-    print("\nThis will show NVIDIA GPU information if available.")
+    print("  NVIDIA GPU: docker exec ollama nvidia-smi")
+    print("  AMD GPU:    docker exec ollama rocm-smi")
+    print("\nThis will show GPU information if available.")

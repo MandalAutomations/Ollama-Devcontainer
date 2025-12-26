@@ -13,9 +13,10 @@ A ready-to-use development environment template for Python projects with integra
 
 - [Docker](https://www.docker.com/products/docker-desktop) installed
 - [VS Code](https://code.visualstudio.com/) with the [Dev Containers extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers)
-- (Optional) **NVIDIA GPU with CUDA support** for GPU-accelerated inference
-  - [NVIDIA Container Toolkit](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.html) must be installed on the host system
-  - Docker must be configured to use the NVIDIA runtime
+- (Optional) **GPU with CUDA or ROCm support** for GPU-accelerated inference
+  - **NVIDIA GPUs**: [NVIDIA Container Toolkit](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.html) must be installed on the host system
+  - **AMD GPUs**: ROCm-compatible AMD GPU with ROCm drivers installed on the host system
+  - Docker must be configured to use the appropriate GPU runtime
 
 ## Getting Started
 
@@ -38,11 +39,17 @@ The template comes with a pre-configured Ollama service and a Python client for 
 
 ### GPU Acceleration
 
-This template is configured to automatically use NVIDIA GPU acceleration if available. The docker-compose.yml file includes GPU resource reservations that will enable GPU support when:
+This template is configured to automatically use GPU acceleration (NVIDIA or AMD) if available. The docker-compose.yml file includes GPU resource reservations that will enable GPU support when:
 
+**For NVIDIA GPUs:**
 1. Your system has an NVIDIA GPU
 2. NVIDIA Container Toolkit is installed on the host
 3. Docker is configured to use the NVIDIA runtime
+
+**For AMD GPUs:**
+1. Your system has a ROCm-compatible AMD GPU
+2. ROCm drivers are installed on the host
+3. Docker has access to `/dev/kfd` and `/dev/dri` devices
 
 If no GPU is available, Ollama will automatically fall back to CPU inference.
 
@@ -62,8 +69,11 @@ This script will:
 You can also check GPU status directly:
 
 ```bash
-# Check if GPU is accessible to the Ollama container
+# For NVIDIA GPUs - Check if GPU is accessible to the Ollama container
 docker exec ollama nvidia-smi
+
+# For AMD GPUs - Check ROCm GPU status
+docker exec ollama rocm-smi
 
 # View Ollama logs (GPU usage is logged during model loading)
 docker logs ollama
@@ -91,6 +101,33 @@ sudo systemctl restart docker
 ```
 
 After installation, rebuild the dev container for changes to take effect.
+
+#### Installing ROCm for AMD GPUs (Linux)
+
+If you have an AMD GPU but GPU acceleration isn't working:
+
+```bash
+# Check if your AMD GPU is supported
+# Visit: https://rocm.docs.amd.com/en/latest/release/gpu_os_support.html
+
+# Install ROCm (Ubuntu/Debian)
+# For Ubuntu 22.04
+wget https://repo.radeon.com/amdgpu-install/latest/ubuntu/jammy/amdgpu-install_latest_all.deb
+sudo apt-get install ./amdgpu-install_latest_all.deb
+
+# Install ROCm components
+sudo amdgpu-install --usecase=rocm --no-dkms
+
+# Add user to render and video groups
+sudo usermod -a -G render,video $USER
+
+# Restart system for changes to take effect
+sudo reboot
+```
+
+After installation, rebuild the dev container for changes to take effect.
+
+**Note**: AMD GPU support requires ROCm 5.7 or later. Check the [official ROCm documentation](https://rocm.docs.amd.com/) for your specific GPU model and OS.
 
 ### Available Models
 
