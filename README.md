@@ -130,16 +130,18 @@ Change the model in the relevant example script (e.g., `examples/generate_respon
 
 The `main.py` file has been removed. Example functionalities are now provided as separate Python scripts in the `examples/` folder:
 
-- `embedding.py`: Example for generating embeddings
-- `generate_response.py`: Example for generating responses
-- `image_detection.py`: Example for image detection
+- `text_embedding.py`: Example for generating embeddings
+- `text_generate_response.py`: Example for generating responses
+- `image_classification.py`: Example for image detection
+- `check_gpu.py`: Check GPU availability and performance
 
 To run an example, use:
 
 ```bash
-python examples/embedding.py
-python examples/generate_response.py
-python examples/image_detection.py
+python examples/check_gpu.py            # Check GPU status and performance
+python examples/text_embedding.py
+python examples/text_generate_response.py
+python examples/image_classification.py
 ```
 
 Each script will initialize the specified Ollama model and perform its respective task.
