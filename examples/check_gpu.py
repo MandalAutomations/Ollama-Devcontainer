@@ -29,7 +29,7 @@ if __name__ == "__main__":
         print(f"  • Response tokens: {gpu_info.get('eval_count', 'N/A')}")
         print(f"  • Response generation duration: {gpu_info.get('eval_duration', 'N/A')} ns")
         
-        if 'tokens_per_second' in gpu_info and gpu_info['tokens_per_second'] is not None:
+        if gpu_info.get('tokens_per_second') is not None:
             print(f"  • Tokens per second: {gpu_info['tokens_per_second']}")
             print("\n" + "=" * 60)
             print("\nPerformance Notes:")
