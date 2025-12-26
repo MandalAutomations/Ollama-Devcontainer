@@ -66,7 +66,7 @@ class llama:
             }
             
             # Calculate tokens per second if available
-            if gpu_info['eval_count'] and gpu_info['eval_duration']:
+            if gpu_info['eval_count'] is not None and gpu_info['eval_duration'] is not None and gpu_info['eval_duration'] > 0:
                 tokens_per_second = gpu_info['eval_count'] / (gpu_info['eval_duration'] / 1e9)
                 gpu_info['tokens_per_second'] = round(tokens_per_second, 2)
             
