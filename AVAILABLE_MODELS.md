@@ -80,7 +80,7 @@ This document lists the available models from Ollama along with their categories
 | moondream | vision | 1.8b | 1 year ago |
 | hermes3 | tools | 3b, 8b, 70b, 405b | 1 year ago |
 | mistral-small3.1 | vision, tools | 24b | 10 months ago |
-| lfm2.5-thinking | tools | 1.2b | 4 weeks ago |
+| lfm2.5-thinking | tools | 1.2b | 1 month ago |
 | yi | N/A | 6b, 9b, 34b | 1 year ago |
 | zephyr | N/A | 7b, 141b | 1 year ago |
 | mistral-large | tools | 123b | 1 year ago |
@@ -148,8 +148,8 @@ This document lists the available models from Ollama along with their categories
 | meditron | N/A | 7b, 70b | 2 years ago |
 | reflection | N/A | 70b | 1 year ago |
 | nemotron-mini | tools | 4b | 1 year ago |
-| granite3.2 | tools | 2b, 8b | 11 months ago |
 | glm-4.7-flash | tools, thinking | N/A | 3 weeks ago |
+| granite3.2 | tools | 2b, 8b | 11 months ago |
 | wizardlm-uncensored | N/A | 13b | 2 years ago |
 | athene-v2 | tools | 72b | 1 year ago |
 | nemotron | tools | 70b | 1 year ago |
@@ -195,12 +195,12 @@ This document lists the available models from Ollama along with their categories
 | command-a | tools | 111b | 11 months ago |
 | marco-o1 | N/A | 7b | 1 year ago |
 | alfred | N/A | 40b | 2 years ago |
-| qwen3-coder-next | tools | N/A | 1 week ago |
+| qwen3-coder-next | tools | N/A | 2 weeks ago |
 | olmo-3.1 | tools | 32b | 2 months ago |
 | devstral-2 | tools | 123b | 2 months ago |
 | command-r7b-arabic | tools | 7b | 11 months ago |
 | kimi-k2.5 | vision, tools, thinking | N/A | 3 weeks ago |
-| cogito-2.1 | N/A | 671b | 2 months ago |
+| cogito-2.1 | N/A | 671b | 3 months ago |
 | gpt-oss-safeguard | tools, thinking | 20b, 120b | 3 months ago |
 | functiongemma | tools | 270m | 2 months ago |
 | glm-4.6 | tools, thinking | N/A | 4 months ago |
@@ -216,4 +216,4 @@ This document lists the available models from Ollama along with their categories
 | kimi-k2-thinking | tools, thinking | N/A | 3 months ago |
 | minimax-m2.1 | tools | N/A | 1 month ago |
 | mistral-large-3 | vision, tools | N/A | 2 months ago |
-| qwen3.5 | vision, tools, thinking | N/A | 3 days ago |
+| qwen3.5 | vision, tools, thinking | N/A | 4 days ago |
