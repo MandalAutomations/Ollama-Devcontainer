@@ -7,7 +7,7 @@ This document lists the available models from Ollama along with their categories
 | llama3.1 | tools | 8b, 70b, 405b | 1 year ago |
 | deepseek-r1 | tools, thinking | 1.5b, 7b, 8b, 14b, 32b, 70b, 671b | 7 months ago |
 | llama3.2 | tools | 1b, 3b | 1 year ago |
-| nomic-embed-text | embedding | N/A | 1 year ago |
+| nomic-embed-text | embedding | N/A | 2 years ago |
 | gemma3 | vision | 270m, 1b, 4b, 12b, 27b | 2 months ago |
 | mistral | tools | 7b | 7 months ago |
 | qwen2.5 | tools | 0.5b, 1.5b, 3b, 7b, 14b, 32b, 72b | 1 year ago |
@@ -34,7 +34,7 @@ This document lists the available models from Ollama along with their categories
 | mistral-nemo | tools | 12b | 7 months ago |
 | llama3.3 | tools | 70b | 1 year ago |
 | bge-m3 | embedding | 567m | 1 year ago |
-| qwen3-coder | tools | 30b, 480b | 4 months ago |
+| qwen3-coder | tools | 30b, 480b | 5 months ago |
 | deepseek-coder | N/A | 1.3b, 6.7b, 33b | 2 years ago |
 | smollm2 | tools | 135m, 360m, 1.7b | 1 year ago |
 | all-minilm | embedding | 22m, 33m | 1 year ago |
@@ -66,7 +66,7 @@ This document lists the available models from Ollama along with their categories
 | smollm | N/A | 135m, 360m, 1.7b | 1 year ago |
 | phi4-mini | tools | 3.8b | 11 months ago |
 | granite3.3 | tools | 2b, 8b | 10 months ago |
-| qwen3-embedding | embedding | 0.6b, 4b, 8b | 4 months ago |
+| qwen3-embedding | embedding | 0.6b, 4b, 8b | 5 months ago |
 | codestral | N/A | 22b | 1 year ago |
 | openthinker | N/A | 7b, 32b | 10 months ago |
 | granite3.2-vision | vision, tools | 2b | 11 months ago |
@@ -149,7 +149,7 @@ This document lists the available models from Ollama along with their categories
 | reflection | N/A | 70b | 1 year ago |
 | nemotron-mini | tools | 4b | 1 year ago |
 | glm-4.7-flash | tools, thinking | N/A | 3 weeks ago |
-| granite3.2 | tools | 2b, 8b | 11 months ago |
+| granite3.2 | tools | 2b, 8b | 12 months ago |
 | wizardlm-uncensored | N/A | 13b | 2 years ago |
 | athene-v2 | tools | 72b | 1 year ago |
 | nemotron | tools | 70b | 1 year ago |
@@ -214,6 +214,6 @@ This document lists the available models from Ollama along with their categories
 | minimax-m2.5 | tools, thinking | N/A | 1 week ago |
 | deepseek-v3.2 | tools, thinking | N/A | 2 months ago |
 | kimi-k2-thinking | tools, thinking | N/A | 3 months ago |
-| minimax-m2.1 | tools | N/A | 1 month ago |
+| minimax-m2.1 | tools | N/A | 2 months ago |
 | mistral-large-3 | vision, tools | N/A | 2 months ago |
-| qwen3.5 | vision, tools, thinking | N/A | 4 days ago |
+| qwen3.5 | vision, tools, thinking | N/A | 5 days ago |
