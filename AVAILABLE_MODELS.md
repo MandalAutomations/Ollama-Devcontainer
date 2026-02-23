@@ -69,7 +69,7 @@ This document lists the available models from Ollama along with their categories
 | qwen3-embedding | embedding | 0.6b, 4b, 8b | 5 months ago |
 | codestral | N/A | 22b | 1 year ago |
 | openthinker | N/A | 7b, 32b | 10 months ago |
-| granite3.2-vision | vision, tools | 2b | 11 months ago |
+| granite3.2-vision | vision, tools | 2b | 12 months ago |
 | devstral | tools | 24b | 7 months ago |
 | dolphin-mistral | N/A | 7b | 1 year ago |
 | granite4 | tools | 350m, 1b, 3b | 3 months ago |
@@ -210,10 +210,10 @@ This document lists the available models from Ollama along with their categories
 | glm-5 | tools, thinking | N/A | 1 week ago |
 | nomic-embed-text-v2-moe | embedding | N/A | 2 months ago |
 | glm-ocr | vision, tools | N/A | 2 weeks ago |
-| kimi-k2 | tools | N/A | 4 months ago |
+| kimi-k2 | tools | N/A | 5 months ago |
 | minimax-m2.5 | tools, thinking | N/A | 1 week ago |
 | deepseek-v3.2 | tools, thinking | N/A | 2 months ago |
 | kimi-k2-thinking | tools, thinking | N/A | 3 months ago |
 | minimax-m2.1 | tools | N/A | 2 months ago |
 | mistral-large-3 | vision, tools | N/A | 2 months ago |
-| qwen3.5 | vision, tools, thinking | N/A | 6 days ago |
+| qwen3.5 | vision, tools, thinking | N/A | 1 week ago |
