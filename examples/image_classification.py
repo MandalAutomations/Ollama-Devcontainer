@@ -6,6 +6,9 @@ def classify_image(image_path):
 
 def main():
     img_dir = os.path.join(os.path.dirname(__file__), 'img')
+    if not os.path.isdir(img_dir):
+        print(f"No image directory at {img_dir}. Drop .png/.jpg files there to classify.")
+        return
     image_files = [f for f in os.listdir(img_dir) if f.lower().endswith(('.png', '.jpg', '.jpeg'))]
 
     for img_file in image_files:

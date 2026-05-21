@@ -3,3 +3,4 @@ pillow
 sounddevice
 scipy
 numpy
+beautifulsoup4

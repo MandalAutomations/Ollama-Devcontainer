@@ -1,0 +1,9 @@
+services:
+    ollama:
+        image: ollama/ollama:0.24.0-rocm
+        devices:
+            - /dev/kfd:/dev/kfd
+            - /dev/dri:/dev/dri
+        group_add:
+            - video
+            - render
