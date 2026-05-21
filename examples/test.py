@@ -8,5 +8,5 @@ EMBEDDING_MODEL = "granite-embedding:30m"  # Find available models here https://
 llama_client = llama(OLLAMA_HOST, EMBEDDING_MODEL)
 
 if __name__ == "__main__":
-   all = llama_client.get_available_models()
+   all = llama_client.get_all_models()
    print("All models:", all)

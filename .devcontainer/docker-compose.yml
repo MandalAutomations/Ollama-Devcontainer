@@ -2,35 +2,19 @@ services:
     app:
         image: python:3.10.16-bullseye
         command: sleep infinity
-        working_dir: /workspaces/Dev-Container-Compose
+        working_dir: /workspaces/Ollama-Devcontainer
         volumes:
-        - ..:/workspaces/Dev-Container-Compose
-        
+            - ..:/workspaces/Ollama-Devcontainer
+
     ollama:
-        image: ollama/ollama:latest
+        image: ollama/ollama:0.24.0
         container_name: ollama
         restart: unless-stopped
         ports:
             - "11434:11434"
         volumes:
             - ollama_data:/root/.ollama
-        devices:
-            # AMD GPU support (ROCm)
-            - /dev/kfd:/dev/kfd
-            - /dev/dri:/dev/dri
-        group_add:
-            # Video group for AMD GPU access
-            - video
-            - render
-        deploy:
-            resources:
-                reservations:
-                    devices:
-                        # NVIDIA GPU support
-                        - driver: nvidia
-                          count: all
-                          capabilities: [gpu]
-            
+
 volumes:
-  ollama_data:
-    driver: local
+    ollama_data:
+        driver: local

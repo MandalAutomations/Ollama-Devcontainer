@@ -2,7 +2,7 @@
     "name": "Dev Container Compose",
     "dockerComposeFile": "docker-compose.yml",
     "service": "app",
-    "workspaceFolder": "/workspaces/Dev-Container-Compose",
+    "workspaceFolder": "/workspaces/Ollama-Devcontainer",
     "postStartCommand": "pip install -r requirements.txt",
     "waitFor": "onCreateCommand",
     "updateContentCommand": "python3 -m pip install -r requirements.txt && alias py='python'",

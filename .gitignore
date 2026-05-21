@@ -15,3 +15,13 @@ venv.bak/
 *.egg-info/
 dist/
 build/
+
+# Local audio recordings
+recordings/
+*.wav
+
+# Example image fixtures (keep repo small)
+examples/img/
+
+# Benchmark output
+examples/data/*.csv
