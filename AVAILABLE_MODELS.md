@@ -17,9 +17,9 @@ This document lists the available models from Ollama along with their categories
 | phi3 | N/A | 3.8b, 14b | 1 year ago |
 | qwen2.5-coder | tools | 0.5b, 1.5b, 3b, 7b, 14b, 32b | 1 year ago |
 | llava | vision | 7b, 13b, 34b | 2 years ago |
-| qwen3.5 | vision, tools, thinking | 0.8b, 2b, 4b, 9b, 27b, 35b, 122b | 6 days ago |
+| qwen3.5 | vision, tools, thinking | 0.8b, 2b, 4b, 9b, 27b, 35b, 122b | 1 week ago |
 | mxbai-embed-large | embedding | 335m | 2 years ago |
-| gemma4 | vision, tools, thinking, audio | e2b, e4b, 26b, 31b | 6 days ago |
+| gemma4 | vision, tools, thinking, audio | e2b, e4b, 26b, 31b | 1 week ago |
 | gpt-oss | tools, thinking | 20b, 120b | 7 months ago |
 | phi4 | N/A | 14b | 1 year ago |
 | gemma | N/A | 2b, 7b | 2 years ago |
@@ -66,13 +66,13 @@ This document lists the available models from Ollama along with their categories
 | deepseek-v3.2 | tools, thinking | N/A | 5 months ago |
 | kimi-k2-thinking | tools, thinking | N/A | 6 months ago |
 | minimax-m2.1 | tools | N/A | 5 months ago |
-| cogito | tools | 3b, 8b, 14b, 32b, 70b | 1 year ago |
 | qwen2.5vl | vision | 3b, 7b, 32b, 72b | 1 year ago |
-| dolphin-llama3 | N/A | 8b, 70b | 2 years ago |
+| cogito | tools | 3b, 8b, 14b, 32b, 70b | 1 year ago |
 | qwen3-embedding | embedding | 0.6b, 4b, 8b | 8 months ago |
+| dolphin-llama3 | N/A | 8b, 70b | 2 years ago |
 | smollm | N/A | 135m, 360m, 1.7b | 1 year ago |
+| qwen3.6 | vision, tools, thinking | 27b, 35b | 1 week ago |
 | dolphin-mixtral | N/A | 8x7b, 8x22b | 1 year ago |
-| qwen3.6 | vision, tools, thinking | 27b, 35b | 6 days ago |
 | llama4 | vision, tools | 16x17b, 128x17b | 11 months ago |
 | gemma3n | N/A | e2b, e4b | 11 months ago |
 | phi4-reasoning | N/A | 14b | 1 year ago |
@@ -83,8 +83,8 @@ This document lists the available models from Ollama along with their categories
 | magistral | tools, thinking | 24b | 11 months ago |
 | command-r | tools | 35b | 1 year ago |
 | hermes3 | tools | 3b, 8b, 70b, 405b | 1 year ago |
-| granite-code | N/A | 3b, 8b, 20b, 34b | 1 year ago |
 | qwen3-coder-next | tools | N/A | 3 months ago |
+| granite-code | N/A | 3b, 8b, 20b, 34b | 1 year ago |
 | embeddinggemma | embedding | 300m | 8 months ago |
 | glm-4.7-flash | tools, thinking | N/A | 4 months ago |
 | codestral | N/A | 22b | 1 year ago |
@@ -114,6 +114,7 @@ This document lists the available models from Ollama along with their categories
 | qwen2-math | N/A | 1.5b, 7b, 72b | 1 year ago |
 | aya | N/A | 8b, 35b | 2 years ago |
 | granite3.3 | tools | 2b, 8b | 1 year ago |
+| glm-ocr | vision, tools | N/A | 3 months ago |
 | neural-chat | N/A | 7b | 2 years ago |
 | llama2-chinese | N/A | 7b, 13b | 2 years ago |
 | stable-code | N/A | 3b | 2 years ago |
@@ -127,15 +128,14 @@ This document lists the available models from Ollama along with their categories
 | granite3.1-dense | tools | 2b, 8b | 1 year ago |
 | llama-guard3 | N/A | 1b, 8b | 1 year ago |
 | dolphincoder | N/A | 7b, 15b | 2 years ago |
-| wizard-math | N/A | 7b, 13b, 70b | 2 years ago |
 | devstral | tools | 24b | 10 months ago |
+| wizard-math | N/A | 7b, 13b, 70b | 2 years ago |
 | llama3-gradient | N/A | 8b, 70b | 2 years ago |
 | phi3.5 | N/A | 3.8b | 1 year ago |
 | samantha-mistral | N/A | 7b | 2 years ago |
 | llama3-groq-tool-use | tools | 8b, 70b | 1 year ago |
 | internlm2 | N/A | 1m, 1.8b, 7b, 20b | 1 year ago |
 | aya-expanse | tools | 8b, 32b | 1 year ago |
-| glm-ocr | vision, tools | N/A | 3 months ago |
 | starling-lm | N/A | 7b | 2 years ago |
 | solar | N/A | 10.7b | 2 years ago |
 | phind-codellama | N/A | 34b | 2 years ago |
@@ -213,8 +213,8 @@ This document lists the available models from Ollama along with their categories
 | phi4-mini-reasoning | N/A | 3.8b | 1 year ago |
 | bge-large | embedding | 335m | 1 year ago |
 | command-r7b | tools | 7b | 1 year ago |
-| smallthinker | N/A | 3b | 1 year ago |
 | nomic-embed-text-v2-moe | embedding | N/A | 5 months ago |
+| smallthinker | N/A | 3b | 1 year ago |
 | alfred | N/A | 40b | 2 years ago |
 | devstral-2 | tools | 123b | 5 months ago |
 | command-a | tools | 111b | 1 year ago |
