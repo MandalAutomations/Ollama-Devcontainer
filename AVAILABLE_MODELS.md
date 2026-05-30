@@ -18,8 +18,8 @@ This document lists the available models from Ollama along with their categories
 | qwen2.5-coder | tools | 0.5b, 1.5b, 3b, 7b, 14b, 32b | 1 year ago |
 | llava | vision | 7b, 13b, 34b | 2 years ago |
 | qwen3.5 | vision, tools, thinking | 0.8b, 2b, 4b, 9b, 27b, 35b, 122b | 1 week ago |
-| mxbai-embed-large | embedding | 335m | 2 years ago |
 | gemma4 | vision, tools, thinking, audio | e2b, e4b, 26b, 31b | 1 week ago |
+| mxbai-embed-large | embedding | 335m | 2 years ago |
 | gpt-oss | tools, thinking | 20b, 120b | 7 months ago |
 | phi4 | N/A | 14b | 1 year ago |
 | gemma | N/A | 2b, 7b | 2 years ago |
@@ -34,8 +34,8 @@ This document lists the available models from Ollama along with their categories
 | llama3.2-vision | vision | 11b, 90b | 1 year ago |
 | bge-m3 | embedding | 567m | 1 year ago |
 | deepseek-coder | N/A | 1.3b, 6.7b, 33b | 2 years ago |
-| llama3.3 | tools | 70b | 1 year ago |
 | qwen3-vl | vision, tools, thinking | 2b, 4b, 8b, 30b, 32b, 235b | 7 months ago |
+| llama3.3 | tools | 70b | 1 year ago |
 | dolphin3 | N/A | 8b | 1 year ago |
 | deepseek-v3 | N/A | 671b | 1 year ago |
 | olmo2 | N/A | 7b, 13b | 1 year ago |
@@ -102,6 +102,7 @@ This document lists the available models from Ollama along with their categories
 | wizardlm2 | N/A | 7b, 8x22b | 2 years ago |
 | glm4 | N/A | 9b | 1 year ago |
 | starcoder | N/A | 1b, 3b, 7b, 15b | 2 years ago |
+| glm-ocr | vision, tools | N/A | 3 months ago |
 | deepseek-v2 | N/A | 16b, 236b | 1 year ago |
 | nous-hermes | N/A | 7b, 13b | 2 years ago |
 | deepseek-llm | N/A | 7b, 67b | 2 years ago |
@@ -114,7 +115,6 @@ This document lists the available models from Ollama along with their categories
 | qwen2-math | N/A | 1.5b, 7b, 72b | 1 year ago |
 | aya | N/A | 8b, 35b | 2 years ago |
 | granite3.3 | tools | 2b, 8b | 1 year ago |
-| glm-ocr | vision, tools | N/A | 3 months ago |
 | neural-chat | N/A | 7b | 2 years ago |
 | llama2-chinese | N/A | 7b, 13b | 2 years ago |
 | stable-code | N/A | 3b | 2 years ago |
