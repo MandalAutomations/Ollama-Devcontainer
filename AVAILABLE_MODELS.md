@@ -17,8 +17,8 @@ This document lists the available models from Ollama along with their categories
 | phi3 | N/A | 3.8b, 14b | 1 year ago |
 | qwen2.5-coder | tools | 0.5b, 1.5b, 3b, 7b, 14b, 32b | 1 year ago |
 | llava | vision | 7b, 13b, 34b | 2 years ago |
-| qwen3.5 | vision, tools, thinking | 0.8b, 2b, 4b, 9b, 27b, 35b, 122b | 2 weeks ago |
-| gemma4 | vision, tools, thinking, audio | e2b, e4b, 12b, 26b, 31b | yesterday |
+| gemma4 | vision, tools, thinking, audio | e2b, e4b, 12b, 26b, 31b | 2 days ago |
+| qwen3.5 | vision, tools, thinking | 0.8b, 2b, 4b, 9b, 27b, 35b, 122b | 3 weeks ago |
 | mxbai-embed-large | embedding | 335m | 2 years ago |
 | gpt-oss | tools, thinking | 20b, 120b | 8 months ago |
 | phi4 | N/A | 14b | 1 year ago |
@@ -46,24 +46,24 @@ This document lists the available models from Ollama along with their categories
 | codegemma | N/A | 2b, 7b | 1 year ago |
 | granite3.1-moe | tools | 1b, 3b | 1 year ago |
 | orca-mini | N/A | 3b, 7b, 13b, 70b | 2 years ago |
-| starcoder2 | N/A | 3b, 7b, 15b | 1 year ago |
 | glm-ocr | vision, tools | N/A | 4 months ago |
+| starcoder2 | N/A | 3b, 7b, 15b | 1 year ago |
 | mixtral | tools | 8x7b, 8x22b | 1 year ago |
 | deepseek-coder-v2 | N/A | 16b, 236b | 1 year ago |
 | llama2-uncensored | N/A | 7b, 70b | 2 years ago |
 | falcon3 | N/A | 1b, 3b, 7b, 10b | 1 year ago |
 | nemotron-3-super | tools, thinking | 120b | 3 months ago |
 | qwen2.5vl | vision | 3b, 7b, 32b, 72b | 1 year ago |
-| glm-5 | tools, thinking | N/A | 3 months ago |
+| glm-5 | tools, thinking | N/A | 4 months ago |
 | llava-llama3 | vision | 8b | 2 years ago |
 | qwq | tools | 32b | 1 year ago |
 | mistral-small3.2 | vision, tools | 24b | 11 months ago |
-| minimax-m2.5 | tools, thinking | N/A | 3 months ago |
+| qwen3.6 | vision, tools, thinking | 27b, 35b | 1 week ago |
+| minimax-m2.5 | tools, thinking | N/A | 4 months ago |
 | glm-5.1 | tools, thinking | N/A | 2 months ago |
 | gemini-3-flash-preview | vision, tools, thinking | N/A | 5 months ago |
-| qwen3.6 | vision, tools, thinking | 27b, 35b | 1 week ago |
 | minimax-m2.7 | tools, thinking | N/A | 2 months ago |
-| glm-4.6 | tools, thinking | N/A | 7 months ago |
+| glm-4.6 | tools, thinking | N/A | 8 months ago |
 | minimax-m2 | tools, thinking | N/A | 7 months ago |
 | glm-4.7 | tools, thinking | N/A | 5 months ago |
 | deepseek-v3.2 | tools, thinking | N/A | 5 months ago |
@@ -75,30 +75,30 @@ This document lists the available models from Ollama along with their categories
 | smollm | N/A | 135m, 360m, 1.7b | 1 year ago |
 | dolphin-mixtral | N/A | 8x7b, 8x22b | 1 year ago |
 | gemma3n | N/A | e2b, e4b | 11 months ago |
-| llama4 | vision, tools | 16x17b, 128x17b | 11 months ago |
+| llama4 | vision, tools | 16x17b, 128x17b | 12 months ago |
 | translategemma | vision | 4b, 12b, 27b | 4 months ago |
 | phi4-reasoning | N/A | 14b | 1 year ago |
 | dolphin-phi | N/A | 2.7b | 2 years ago |
 | qwen3-coder-next | tools | N/A | 4 months ago |
 | dolphin-mistral | N/A | 7b | 2 years ago |
 | phi | N/A | 2.7b | 2 years ago |
-| magistral | tools, thinking | 24b | 11 months ago |
+| magistral | tools, thinking | 24b | 12 months ago |
 | command-r | tools | 35b | 1 year ago |
 | hermes3 | tools | 3b, 8b, 70b, 405b | 1 year ago |
 | granite-code | N/A | 3b, 8b, 20b, 34b | 1 year ago |
 | embeddinggemma | embedding | 300m | 9 months ago |
 | moondream | vision | 1.8b | 2 years ago |
-| glm-4.7-flash | tools, thinking | N/A | 5 days ago |
+| glm-4.7-flash | tools, thinking | N/A | 6 days ago |
 | codestral | N/A | 22b | 1 year ago |
 | deepscaler | N/A | 1.5b | 1 year ago |
 | yi | N/A | 6b, 9b, 34b | 2 years ago |
 | granite4 | tools | 350m, 1b, 3b | 7 months ago |
-| lfm2.5-thinking | tools | 1.2b | 4 months ago |
-| zephyr | N/A | 7b, 141b | 2 years ago |
 | ministral-3 | vision, tools | 3b, 8b, 14b | 6 months ago |
+| lfm2.5-thinking | tools | 1.2b | 4 months ago |
+| phi4-mini | tools | 3.8b | 1 year ago |
+| zephyr | N/A | 7b, 141b | 2 years ago |
 | mistral-large | tools | 123b | 1 year ago |
 | wizard-vicuna-uncensored | N/A | 7b, 13b, 30b | 2 years ago |
-| phi4-mini | tools | 3.8b | 1 year ago |
 | glm4 | N/A | 9b | 1 year ago |
 | openthinker | N/A | 7b, 32b | 1 year ago |
 | wizardlm2 | N/A | 7b, 8x22b | 2 years ago |
@@ -115,8 +115,8 @@ This document lists the available models from Ollama along with their categories
 | qwen2-math | N/A | 1.5b, 7b, 72b | 1 year ago |
 | aya | N/A | 8b, 35b | 2 years ago |
 | granite3.3 | tools | 2b, 8b | 1 year ago |
-| neural-chat | N/A | 7b | 2 years ago |
 | sqlcoder | N/A | 7b, 15b | 2 years ago |
+| neural-chat | N/A | 7b | 2 years ago |
 | llama2-chinese | N/A | 7b, 13b | 2 years ago |
 | stable-code | N/A | 3b | 2 years ago |
 | nous-hermes2 | N/A | 10.7b, 34b | 2 years ago |
@@ -129,8 +129,8 @@ This document lists the available models from Ollama along with their categories
 | llama-guard3 | N/A | 1b, 8b | 1 year ago |
 | devstral | tools | 24b | 11 months ago |
 | dolphincoder | N/A | 7b, 15b | 2 years ago |
-| wizard-math | N/A | 7b, 13b, 70b | 2 years ago |
 | phi3.5 | N/A | 3.8b | 1 year ago |
+| wizard-math | N/A | 7b, 13b, 70b | 2 years ago |
 | llama3-gradient | N/A | 8b, 70b | 2 years ago |
 | samantha-mistral | N/A | 7b | 2 years ago |
 | llama3-groq-tool-use | tools | 8b, 70b | 1 year ago |
@@ -170,14 +170,14 @@ This document lists the available models from Ollama along with their categories
 | reflection | N/A | 70b | 1 year ago |
 | nemotron | tools | 70b | 1 year ago |
 | codeup | N/A | 13b | 2 years ago |
-| athene-v2 | tools | 72b | 1 year ago |
 | nous-hermes2-mixtral | N/A | 8x7b | 1 year ago |
+| athene-v2 | tools | 72b | 1 year ago |
 | qwen3-next | tools, thinking | 80b | 6 months ago |
 | medllama2 | N/A | 7b | 2 years ago |
 | megadolphin | N/A | 120b | 2 years ago |
 | everythinglm | N/A | 13b | 2 years ago |
-| solar-pro | N/A | 22b | 1 year ago |
 | nemotron-3-nano | tools, thinking | 4b, 30b | 2 months ago |
+| solar-pro | N/A | 22b | 1 year ago |
 | magicoder | N/A | 7b | 2 years ago |
 | mathstral | N/A | 7b | 1 year ago |
 | notus | N/A | 7b | 2 years ago |
@@ -198,8 +198,8 @@ This document lists the available models from Ollama along with their categories
 | goliath | N/A | N/A | 2 years ago |
 | granite3.2 | tools | 2b, 8b | 1 year ago |
 | olmo-3 | N/A | 7b, 32b | 5 months ago |
-| r1-1776 | N/A | 70b, 671b | 1 year ago |
 | snowflake-arctic-embed2 | embedding | 568m | 1 year ago |
+| r1-1776 | N/A | 70b, 671b | 1 year ago |
 | sailor2 | N/A | 1b, 8b, 20b | 1 year ago |
 | tulu3 | N/A | 8b, 70b | 1 year ago |
 | granite-embedding | embedding | 30m, 278m | 1 year ago |
@@ -238,3 +238,4 @@ This document lists the available models from Ollama along with their categories
 | nemotron-3-ultra | tools, thinking | N/A | 1 week ago |
 | minicpm-v4.6 | vision | 1b | 1 week ago |
 | minicpm-v4.5 | vision | 8b | 1 week ago |
+| granite4.1-guardian | tools, thinking | 8b | yesterday |
